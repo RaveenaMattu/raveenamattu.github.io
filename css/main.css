@@ -11,15 +11,13 @@ body {
 }
   #hamburger {
       position: fixed;
-      z-index: 3;
-      top: 21px;
+      top: 41px;
       right: 13px;
       width: 90px;
       height: 80px;
       padding: 5px 10px;
-      /* visibility: hidden; */
-      visibility: visible; /* temporarily force visible */
-  background: #fff; /* debug */
+      z-index: 10;
+      visibility: hidden;
     }
       .bar {
         width: 50px;
@@ -31,8 +29,9 @@ body {
       }
     #menu {
       position: fixed;
-      z-index: 1;
-      background: #222831;
+      z-index: 5;
+      background: #29303b;
+
       width: 260px;
       height: 100vh;
       top: 0;
@@ -45,12 +44,15 @@ body {
         text-decoration: none;
         color: #e7e7e5;
         margin: 23px 0;
+        padding: 10px 20px;
         font-size: 1.5em;
         font-weight: 500;
         font-family: "Montserrat", sans-serif;
       }
       #menu > a:hover {
-        color: #ffd36a;
+        color: #29303b;
+        background: #ffd36a;
+        transition: background 0.3s ease-in-out;
       }
   main {
     width: 100%;
@@ -201,61 +203,57 @@ header {
 #about {
   width: 100%;
   grid-area: abt;
-  padding: 100px 150px;
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: auto auto;
+  grid-template-columns: 1fr 2fr;
+  gap: 30px;
   align-items: center;
+  padding: 100px 150px;
 }
 
-#about > img {
-  grid-column: 1 / span 5;
-  width: 60%;
+#about img {
+  width: 100%;
+  max-width: 300px;
   height: auto;
-  object-fit: cover;
+  border-radius: 12px;
   justify-self: center;
-  border-radius: 50px;
-  filter: drop-shadow(0 4px 12px rgba(108, 108, 108, 0.904));
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-#about .about-text {
-  grid-column: 6 / -1;
-  display: grid; /* changed from flex */
-  grid-template-columns: 1fr;
-  gap: 70px;
+.about-text {
+  text-align: justify;
+  padding: 0 100px;
 }
 
-#about .about-text h2 {
+.about-text h2 {
   font-size: 3em;
   color: #ffd36a;
   font-weight: 600;
-  margin: 0;
-  padding: 0 50px;
+  margin-bottom: 50px;
+  justify-self: left;
 }
 
-#about .about-text p {
-  font-size: 1.15em;
-  line-height: 1.7;
+.about-text p {
+  font-size: 1rem;
+  line-height: 1.6;
   color: #e7e7e5;
-  font-weight: 300;
-  text-align: justify;
-  margin: 0;
-  padding: 0 50px;
+  margin-bottom: 50px;
 }
 
-button.click {
-  background: #ffd36a;
-  width: 180px;
-  color: #222831;
-  border: none;
-  padding: 15px 20px;
-  font-size: 1em;
-  border-radius: 10px;
+.about-text .click {
+  background: transparent;
+  color: #ffd36a;
+  border: 2px solid #ffd36a;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  font-size: 1rem;
   cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  justify-self: end; /* works now */
+  transition: background-color 0.3s;
 }
 
+.about-text .click:hover {
+  background: #ffd36a;
+  color: #222831;
+}
 #quote {
   grid-area: quo;
   place-items: center;
@@ -276,7 +274,7 @@ button.click {
   letter-spacing: 2px;
   line-height: 2;
 }
-#quote > #quote-text > #gray {
+ #gray {
   color: #e7e7e5;
 }
 #quote > #quote-text > #sign {
@@ -417,8 +415,8 @@ button.click {
 }
 
 .project-link:hover {
-  background: #222831;
-  color: #fff;
+  background: #ffd36a;
+  color: #222831;
 }
 
 .slider-btn {
@@ -541,7 +539,7 @@ footer {
   #hamburger {
     visibility: visible;
   }
-  nav > a {
+  nav > div > a {
     visibility: hidden;
   }
   header {
@@ -566,16 +564,12 @@ footer {
   }
 
   #about > img {
-    grid-row: 2;
     width: 80%;
     justify-self: center;
   }
 
-  #about .about-text {
-    grid-row: 1;
-    grid-column: 1;
+   #about > .about-text > h2 {
     text-align: center;
-    padding: 0;
   }
 
   #about .about-text h2,
