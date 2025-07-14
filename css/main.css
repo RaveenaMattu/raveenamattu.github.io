@@ -559,36 +559,40 @@ footer {
   #about {
     grid-template-columns: 1fr;
     grid-template-rows: auto auto;
-    padding: 50px 25px;
+    padding: 25px;
     gap: 40px;
   }
 
   #about > img {
     width: 80%;
     justify-self: center;
+    padding-top: 50px;
   }
 
    #about > .about-text > h2 {
     text-align: center;
   }
 
-  #about .about-text h2,
-  #about .about-text p {
-    padding: 0;
-  }
+
 
   .click {
     justify-self: center;
   }
+  #quote {
+    padding: 25px;
+  }
   #skills {
-    padding: 50px 25px;
+    padding: 25px;
   }
   #project {
-    padding: 50px 25px;
+    padding: 25px;
+  }
+  .slider-wrapper {
+    padding: 0;
   }
   #contact {
     grid-template-columns: 1fr;
-    padding: 50px 25px;
+    padding: 25px;
     gap: 50px;
   }
 
