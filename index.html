@@ -1,105 +1,208 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="css/app.css">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Raveena Mattu</title>
+  <link rel="stylesheet" href="css/main.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="scripts/main.js" defer></script>
 </head>
 <body>
-
-<div class="topnav">
-  <div class="topnav-left">
-    
-  <a href="#about">About</a>
-  <a href="#cg">Career Goals</a>
-  <a href="#projects">Projects</a>
-
-
-  
-  
+  <div id="hamburger" onclick="toggleMenu();">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
   </div>
-  <div class="topnav-right">
-    
-  
-    <a href="mailto:matturuby@gmail.com">
-      <img src="assets/images/mail.png" alt="mail" height="30px" width="40px" id="mail" >
-    </a>
-    <a href="https://www.linkedin.com/in/raveenamattu/">
-      <img src="assets/images/linkedin.png" alt="linkedIn" height="70px" width="70px" id="linkedIn">
-    </a>
-  
-    
-    
-    </div>
-</div>
+  <div id="menu">
+    <a href="#about" title="ABOUT" onclick="toggleMenu();">About</a>
+    <a href="#skills" title="SKILLS" onclick="toggleMenu();">Skills</a>
+    <a href="#projects" title="PROJECTS" onclick="toggleMenu();">Projects</a>
+    <a href="#contact" title="CONTACT" onclick="toggleMenu();">Contact</a>
+  </div>
+  <main>
+    <nav>
+      <div>
+        <img src="assets/images/logo.png" alt="logo">
+      </div>
+      <div>
+        <a href="#about" title="ABOUT">ABOUT</a>
+        <a href="#skills" title="ABOUT">SKILLS</a>
+        <a href="#projects" title="PROJECTS">PROJECTS</a>
+        <a href="#contact" title="CONTACT">CONTACT</a>
+      </div>
+    </nav>
+    <header>
+      <div class="header-content">
+        <p>Hello, Myself..</p>
+        <h1><span id="fName">RAVEENA</span><br>
+        <span id="lName">MATTU</span></h1>    
+      </div>
+      <div class="rotate-img">
+        <div class="rotating-circle"></div>
+        <div class="static-text" id="techText"></div>
+      </div>  
+    </header>
+    <section id="about">
+      <img src="assets/images/ID2.png" alt="Profile Picture">
+      <div class="about-text">
+        <h2>ABOUT ME</h2>
+        <p>Hello! I’m Raveena, an aspiring UX/UI designer and web developer with a passion for creating engaging, user-centered digital experiences. My journey into design and development started with a fascination for how intuitive interfaces can elevate user satisfaction and make complex tasks feel effortless.
+        With a growing skill set in tools like Adobe Illustrator, Adobe Photoshop, Adobe XD, HTML, CSS, and JavaScript, I enjoy translating user needs into seamless, visually compelling designs. I’m always looking for ways to improve my skills and stay current with industry trends, whether through online courses, hands-on projects, or collaborating with others in the field.</p>
+        <button onclick="window.location.href='assets/documents/Raveena_Resume.pdf';" class="click">View Resume</button>
+      </div>  
+    </section>
+    <section id="quote">
+      <div id="quote-text">
+        <p> Life is like <span id="gray">GITHUB…</span>nothing will change until you <span id="gray">COMMIT</span>. </p>
+        <p id="sign">~ a life lesson.</p>
+      </div>     
+    </section>
+    <section id="skills">
+      <h2>TECHNOLOGIES / SOFT SKILLS </h2>
+      <div class="skills-grid">
+        <div class="skill-item"><img src="assets/images/languages/html.png" alt="HTML"></div>
+        <div class="skill-item"><img src="assets/images/languages/css.png" alt="CSS"></div>
+        <div class="skill-item"><img src="assets/images/languages/js.png" alt="JavaScript"></div>
+        <div class="skill-item"><img src="assets/images/languages/xd.png" alt="Adobe XD"></div>
+        <div class="skill-item"><img src="assets/images/languages/ps.png" alt="Adobe Phototoshop"></div>
+        <div class="skill-item"><img src="assets/images/languages/ai.png" alt="Adobe IlluIllustrator"></div>
+        <div class="skill-item"><img src="assets/images/languages/java.png" alt="Java"></div>
+        <div class="skill-item"><img src="assets/images/languages/php.png" alt="PHP"></div>
+        <div class="skill-item"><img src="assets/images/languages/react.png" alt="React"></div>
+        <div class="skill-item"><img src="assets/images/languages/aI.png" alt="Illustrator"></div>
+        <div class="skill-item"><img src="assets/images/languages/swift.png" alt="Swift"></div>
+        <div class="skill-item"><img src="assets/images/languages/mysql.png" alt="MySQL"></div>
+        <div class="skill-item"><img src="assets/images/languages/linux.png" alt="Linux"></div>
+        <div class="skill-item"><img src="assets/images/languages/wordpress.png" alt="Wordpress"></div>
+        <div class="skill-item"><img src="assets/images/languages/github.png" alt="Github"></div>
+        <div class="skill-item"><img src="assets/images/languages/vscode.png" alt="VS Code"></div>
+        <div class="skill-item"><img src="assets/images/languages/angular.png" alt="Angular"></div>
+      </div>
+    </section>
+    <section id="projects">
+      <h2>PROJECTS</h2>
+      <div class="slider-wrapper">
+        <button class="slider-btn prev" onclick="slideProjects(-1)">&#10094;</button>
+        <div class="slider-track" id="sliderTrack">
+          <!-- 1st: image left, text right -->
+          <div class="project-card">
+            <div class="project-img">
+              <img src="assets/images/site1.png" alt="Portfolio Site 1">
+            </div>
+            <div class="project-info">
+              <h3>Portfolio Website</h3>
+              <p>A personal portfolio showing front-end and back-end skills.</p>
+              <a href="#" target="_blank" class="project-link">View Site →</a>
+            </div>
+          </div>
 
-<hr>
-<header>
- <!-- <div class="content-text">
-    &nbsp;I'M<br>
-    <h1>RAVEENA MATTU.</h1>
-    <p>&nbsp;UX/UI DESIGNER AND WEB DEVELOPER</p>
+          <!-- 2nd: image right, text left -->
+          <div class="project-card">
+            <div class="project-img">
+              <img src="assets/images/site2.png" alt="E-commerce Site">
+            </div>
+            <div class="project-info">
+              <h3>E-commerce Layout</h3>
+              <p>A clean layout for an online store using HTML and CSS Grid.</p>
+              <a href="#" target="_blank" class="project-link">View Site →</a>
+            </div>
+          </div>
 
-  </div>-->
-  <h1>I'M<br>RAVEENA MATTU.</h1><br>
-  <p>UX/UI DESIGNER AND WEB DEVELOPER</p>
-</header>
+          <!-- 3rd: image left, text right -->
+          <div class="project-card">
+            <div class="project-img">
+              <img src="assets/images/site3.png" alt="Design Showcase">
+            </div>
+            <div class="project-info">
+              <h3>Design Showcase</h3>
+              <p>UI/UX focused design showcase with hover animations.</p>
+              <a href="#" target="_blank" class="project-link">View Site →</a>
+            </div>
+          </div>
 
-<section id="about">
-  <h1>About Myself</h1><hr>
-  <p>Hello! I’m Raveena, an aspiring UX/UI designer and web developer with a passion for creating engaging, user-centered digital experiences. My journey into design and development started with a fascination for how intuitive interfaces can elevate user satisfaction and make complex tasks feel effortless.
+          <div class="project-card">
+            <div class="project-img">
+              <img src="assets/images/site4.png" alt="E-commerce Site">
+            </div>
+            <div class="project-info">
+              <h3>E-commerce Layout</h3>
+              <p>A clean layout for an online store using HTML and CSS Grid.</p>
+              <a href="#" target="_blank" class="project-link">View Site →</a>
+            </div>
+          </div>
 
-    With a growing skill set in tools like Adobe Illustrator, Adobe Photoshop, Adobe XD, HTML, CSS, and JavaScript, I enjoy translating user needs into seamless, visually compelling designs. I’m always looking for ways to improve my skills and stay current with industry trends, whether through online courses, hands-on projects, or collaborating with others in the field.
-    
-    </p>
-</section>
+          <!-- 3rd: image left, text right -->
+          <div class="project-card">
+            <div class="project-img">
+              <img src="assets/images/design1.png" alt="Design Showcase">
+            </div>
+            <div class="project-info">
+              <h3>Design Showcase</h3>
+              <p>UI/UX focused design showcase with hover animations.</p>
+              <a href="#" target="_blank" class="project-link">View Site →</a>
+            </div>
+          </div>
 
-<section id="careerGoals">
-  <h1 id="cg">My Career Goals</h1><hr>
-  <p><b>Develop a Strong Portfolio:</b>
-        Build a comprehensive portfolio that showcases a range of projects, including both UX/UI design and web development work, to attract potential clients and employers.
-        Aim to complete at least 2-3 standout projects per year, demonstrating a variety of styles and solutions.
-  </p>
-  <p><b>Master Advanced Design and Coding Skills:</b>
-      Deepen my expertise in industry-standard tools (Adobe XD, Photoshop, Illustrator) and front-end technologies (like HTML, CSS, JavaScript, and frameworks like React or JS). 
-      This could include setting a goal to earn relevant certifications or complete advanced courses.
-  </p>
-  <p><b>Stay Ahead of Design Trends:</b>
-    Regularly explore current trends and emerging technologies in UX/UI and front-end development.
-    Experiment with new tools or techniques, setting aside time for learning and innovation each month.
-  </p>
-  <p><b>Mentor or Teach Others in the Field:</b>
-    Once I'm more established, I would like to consider mentoring junior designers or writing tutorials.
-    Sharing knowledge will reinforce my skills and build a reputation as an authority in the field.
-  </p>
-</section>
+          <div class="project-card">
+            <div class="project-img">
+              <img src="assets/images/design2.png" alt="E-commerce Site">
+            </div>
+            <div class="project-info">
+              <h3>Design Showcase</h3>
+              <p>UI/UX focused design showcase with hover animations.</p>
+              <a href="#" target="_blank" class="project-link">View Site →</a>
+            </div>
+          </div>
 
-<section id="projects">
-  <h1>Projects</h1><hr>
-  <p>Click on the image to view a project in full.
-    </p>
-  
-  <a href="https://xd.adobe.com/view/a234d901-092e-4c2d-8bd9-ac7748a9064a-f767/?fullscreen">
-    <img src="projects/Home1.png" alt="logo 1" class="thumbnail" height="400px" width="300px"></a>
-  <a href="https://xd.adobe.com/view/9a7f0840-36b2-4c65-b03b-dcbc21750e27-cf2c/?fullscreen">
-    <img src="projects/home.png" alt="logo 2" class="thumbnail" height="400px" width="300px"></a>
-  <a href=" https://xd.adobe.com/view/cb85429f-6f97-4c2d-b059-4b8c07df171b-9ed6/?fullscreen">
-    <img src="projects/app.png" alt="logo 3" class="thumbnail" height="400px" width="300px"></a>
-  <a href=" https://xd.adobe.com/view/ee1028a5-0ed1-4feb-8ff1-a576674413f5-bb43/?fullscreen">
-    <img src="projects/assignment3.png" alt="logo 4" class="thumbnail" height="400px" width="300px"></a>
+          <!-- 3rd: image left, text right -->
+          <div class="project-card">
+            <div class="project-img">
+              <img src="assets/images/design3.png" alt="Design Showcase">
+            </div>
+            <div class="project-info">
+              <h3>Design Showcase</h3>
+              <p>UI/UX focused design showcase with hover animations.</p>
+              <a href="#" target="_blank" class="project-link">View Site →</a>
+            </div>
+          </div>
 
-</section>
+          <div class="project-card">
+            <div class="project-img">
+              <img src="assets/images/design4.png" alt="E-commerce Site">
+            </div>
+            <div class="project-info">
+              <h3>Urban Glide Skateboards</h3>
+              <p>A clean layout for an online store using HTML and CSS Grid.</p>
+              <a href="#" target="_blank" class="project-link">View Site →</a>
+            </div>
+          </div>
+        </div>
+        <button class="slider-btn next" onclick="slideProjects(1)">&#10095;</button>
+      </div>
+    </section>
 
 
 
-
-<hr>
-<footer>
- 
-  <p>&copy; 2024 Raveena Mattu, All Rights Reserved.</p>
-</footer>
-</body>
-</html>
-
+    <section id="contact">
+        <div class="contact-info">
+          <h2>CONTACT</h2>
+          <p>
+            I’m always open to new opportunities, collaborations, or just a friendly chat
+            about design and development. Whether you have a project in mind or simply
+            want to connect, feel free to reach out — I’d love to hear from you!
+          </p>
+        </div>
+        <form class="contact-form">
+          <input type="text" placeholder="Enter your name" required>
+          <input type="email" placeholder="Enter your email address" required>
+          <textarea placeholder="Enter your query" required></textarea>
+          <button type="submit">Submit Query</button>
+        </form>
+    </section>
+    <footer>
+      <p>© 2025 Raveena Mattu Designs. All Rights Reserved.</p>
+    </footer>
+  </main>
 </body>
 </html>
