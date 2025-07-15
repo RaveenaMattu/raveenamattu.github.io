@@ -128,11 +128,12 @@ header {
   grid-area: hdr;
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr 1fr; /* 2 equal columns */
+  grid-template-columns: 2fr 1fr;
   align-items: center;
   padding: clamp(100px, 10vw, 200px) clamp(20px, 8vw, 150px);
   overflow: hidden;
   gap: 50px;
+  /* background: #7c9bca; */
 }
 .rotate-img {
   position: relative;
@@ -144,6 +145,7 @@ header {
   place-items: center;
   overflow: hidden;
   padding: 50px;
+  /* background: #7cefc7; */
 }
 
 .rotating-circle {
@@ -179,7 +181,7 @@ header {
 }
 .header-content {
   width: 100%;
-  min-width: 0;
+  /* background: #ed7b7b80; */
 }
 .header-content > p {
   font-size: 1.5em;
@@ -192,6 +194,7 @@ header {
   letter-spacing: 1px;
   color: #ffd36a;
   line-height: 1;
+  overflow: hidden;
 }
 #lName {
   color: transparent;
@@ -208,6 +211,10 @@ header {
   color: #2228319e;
   /* filter: blur(1px); */
 }
+section {
+  width: 100%;
+  padding: clamp(30px, 8vw, 50px) clamp(20px, 5vw, 150px);
+}
 
 #about {
   width: 100%;
@@ -216,7 +223,8 @@ header {
   grid-template-columns: 1fr 2fr;
   gap: 30px;
   align-items: center;
-  padding: 100px 150px;
+  /* padding: 100px 150px; */
+  /* background: #6c5dc1; */
 }
 
 #about img {
@@ -267,7 +275,8 @@ header {
   place-items: center;
   width: 100%;
   height: auto;
-  padding: 100px 150px;
+  /* padding: 100px 150px; */
+  /* background: #e6a442; */
 }
 #quote-text {
   border: 2px solid #e7e7e5;
@@ -292,17 +301,18 @@ header {
   
 }
 #skills {
-  padding: 100px 150px;
-  text-align: center;
+  width: 100%;
+  display: grid;
+  /* padding: 100px 150px; */
   grid-area: skl;
   gap: 70px;
+  /* background: #9b6f6f; */
 }
 
 #skills h2 {
   font-size: 3em;
   color: #ffd36a;
   font-weight: 600;
-  margin-bottom: 70px;
   justify-self: left;
 }
 
@@ -338,10 +348,10 @@ header {
 }
 
 #projects {
-  padding: clamp(60px, 8vw, 100px) clamp(20px, 5vw, 150px);
-  text-align: center;
+  /* padding: clamp(60px, 8vw, 100px) clamp(20px, 5vw, 150px); */
   width: 100%;
   grid-area: pro;
+  /* background: #72a4f5; */
 }
 
 #projects h2 {
@@ -351,7 +361,6 @@ header {
   margin-bottom: 70px;
 }
 
-/* === SLIDER GRID LAYOUT === */
 .slider-wrapper {
   display: grid;
   grid-template-columns: auto 1fr auto; /* prev btn | track | next btn */
@@ -440,10 +449,13 @@ header {
 }
 
 #contact {
+  width: 100%;
+  display: grid;
   grid-area: con;
-  padding: 100px 150px;
+  /* padding: 100px 150px; */
   display: grid;
   grid-template-columns: 3fr 2fr;
+  /* background: #94eceb; */
 }
 
 
