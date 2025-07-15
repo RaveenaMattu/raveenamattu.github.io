@@ -4,7 +4,7 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
   overflow-x: hidden;
-  
+  outline: 1px solid red;
 }
 body {
   font-family: "Poppins", sans-serif;
@@ -609,7 +609,7 @@ footer {
     padding: 25px;
   }
   #project {
-    padding: 5px;
+    padding: 60px 30px;
   }
   .slider-wrapper {
     padding: 0;
