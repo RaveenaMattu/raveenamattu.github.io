@@ -177,21 +177,27 @@ let textAlign = ['left', 'right', 'center', 'justify'];
 
 
 
-  let currentIndex = 0;
+let currentIndex = 0;
 
-  function slideProjects(direction) {
-    const track = document.getElementById('sliderTrack');
-    const totalSlides = track.children.length;
+function slideProjects(direction) {
+  const track = document.getElementById('sliderTrack');
+  const slides = track.children;
+  const totalSlides = slides.length;
 
-    currentIndex += direction;
+  // Update index safely
+  currentIndex += direction;
+  if (currentIndex < 0) currentIndex = 0;
+  if (currentIndex >= totalSlides) currentIndex = totalSlides - 1;
 
-    if (currentIndex < 0) currentIndex = 0;
-    if (currentIndex >= totalSlides) currentIndex = totalSlides - 1;
+  // Get the width of one visible slide
+  const slideWidth = slides[0].offsetWidth + parseInt(getComputedStyle(track).gap || 0);
 
-    const width = track.clientWidth;
-    track.scrollTo({
-      left: width * currentIndex,
-      behavior: 'smooth'
-    });
-  }
+  // Scroll to exact card without extra offset
+  track.scrollTo({
+    left: slideWidth * currentIndex,
+    behavior: 'smooth'
+  });
+}
+
+
 

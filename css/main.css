@@ -351,23 +351,26 @@ header {
   margin-bottom: 70px;
 }
 
+/* === SLIDER GRID LAYOUT === */
 .slider-wrapper {
-  position: relative;
-  overflow: hidden;
+  display: grid;
+  grid-template-columns: auto 1fr auto; /* prev btn | track | next btn */
+  align-items: center;
+  gap: 20px;
   width: 100%;
-  margin: 60px auto;
-  padding: 0 30px;
 }
 
+/* Container for overflow control */
 .slider-track {
   display: grid;
   grid-auto-flow: column;
-  grid-auto-columns: 50%;
-  overflow-x: hidden;
+  grid-auto-columns: 100%;
+  overflow: hidden;
   scroll-behavior: smooth;
   gap: 30px;
 }
 
+/* === PROJECT CARD === */
 .project-card {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -379,23 +382,16 @@ header {
   border-radius: 12px;
 }
 
-.project-card.reverse {
-  grid-template-columns: 1fr 1fr;
-  direction: rtl;
-}
-
-.project-card.reverse .project-info {
-  direction: ltr;
-}
-
 .project-img img {
   width: 100%;
   max-width: 100%;
   height: auto;
-  border-radius: 10px;}
+  border-radius: 10px;
+}
 
 .project-info {
   text-align: left;
+  padding: 20px 0;
 }
 
 .project-info h3 {
@@ -407,7 +403,7 @@ header {
 .project-info p {
   font-size: 1.1rem;
   color: #e7e7e5;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .project-link {
@@ -426,32 +422,22 @@ header {
   color: #222831;
 }
 
+
 .slider-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 4rem;
-  font-weight: 600;
+  font-size: 2.5rem;
   color: #ffd36a;
+  background: transparent;
   border: none;
   cursor: pointer;
-  padding: 10px 18px;
-  z-index: 2;
-  background: transparent;
+  z-index: 1;
+  padding: 10px;
   transition: 0.3s;
 }
 
 .slider-btn:hover {
   background: #222831;
+  border-radius: 50%;
 }
-
-.slider-btn.prev {
-  left: 10px;
-}
-.slider-btn.next {
-  right: 10px;
-}
-
 
 #contact {
   grid-area: con;
@@ -605,8 +591,10 @@ footer {
 
   .about-text .click {
     margin: 0 auto;
+    align-self: center;
     display: inline-block;
-  }  #quote {
+  } 
+   #quote {
     padding: 25px;
   }
   #skills {
@@ -642,10 +630,15 @@ footer {
   .project-card {
     grid-template-columns: 1fr; /* Stack image and text vertically */
     text-align: center;
+    padding: 10px;
   }
 
   .project-info {
     text-align: center;
+  }
+  .project-info > h3 {
+    font-size: 1.5rem;
+    font-weight: 500;
   }
 
   .project-link {
