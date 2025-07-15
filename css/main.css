@@ -20,8 +20,8 @@ body {
       visibility: hidden;
     }
       .bar {
-        width: 50px;
-        height: 7px;
+        width: 40px;
+        height: 4px;
         margin: 4px 0;
         background: #e7e7e5;
         border-radius: 4px;
@@ -128,7 +128,8 @@ header {
   display: grid;
   grid-template-columns: 1fr 1fr; /* 2 equal columns */
   align-items: center;
-  padding: 200px  150px;
+  padding: clamp(100px, 10vw, 200px) clamp(20px, 8vw, 150px);
+  overflow: hidden;
   gap: 50px;
 }
 .rotate-img {
@@ -139,13 +140,15 @@ header {
   display: grid;
   justify-self: end;
   place-items: center;
+  overflow: hidden;
+  padding: 50px;
 }
 
 .rotating-circle {
   position: absolute;
   inset: 0;
   background: url('../assets/images/header.png') no-repeat center center;
-  background-size: contain;
+  background-size: cover;
   animation: rotate360 30s linear infinite;
   z-index: 1;
   
@@ -172,13 +175,17 @@ header {
   0%, 100% { opacity: 0; }
   50% { opacity: 1; }
 }
+.header-content {
+  width: 100%;
+  min-width: 0;
+}
 .header-content > p {
   font-size: 1.5em;
   letter-spacing: 5px;
   color: #e7e7e5;
 }
 .header-content > h1 {
-  font-size: 10rem;
+  font-size: min(10vw, 10rem);
   font-weight: 900;
   letter-spacing: 1px;
   color: #ffd36a;
@@ -221,7 +228,7 @@ header {
 
 .about-text {
   text-align: justify;
-  padding: 0 100px;
+  padding: 0 50px;
 }
 
 .about-text h2 {
@@ -233,7 +240,7 @@ header {
 }
 
 .about-text p {
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 1.6;
   color: #e7e7e5;
   margin-bottom: 50px;
@@ -466,6 +473,7 @@ header {
   font-size: 1.1rem;
   color: #e7e7e5;
   line-height: 2;
+  text-align: justify;
   max-width: 90%;
 }
 
@@ -544,51 +552,65 @@ footer {
   }
   header {
     grid-template-columns: 1fr;
+    padding: 100px 30px;
+    gap: 30px;
     text-align: center;
-    padding: 50px;
   }
-  header > .header-content {
-    grid-row: 2;
-    padding-bottom: none;
-    padding-top: 50px;
+
+  .rotate-img {
+    justify-self: center;
   }
-  header > .rotate-img{
-    grid-row: 1;
-    padding: 100px;
+
+  .header-content > h1 {
+    font-size: 5rem;
   }
-  #about {
+
+  .header-content > p {
+    font-size: 1.2rem;
+  }
+
+ #about {
     grid-template-columns: 1fr;
-    grid-template-rows: auto auto;
-    padding: 25px;
-    gap: 40px;
-  }
-
-  #about > img {
-    width: 80%;
-    justify-self: center;
-    padding-top: 50px;
-  }
-
-   #about > .about-text > h2 {
+    padding: 60px 30px;
     text-align: center;
   }
 
-
-
-  .click {
+  #about img {
+    width: 60%;
     justify-self: center;
   }
-  #quote {
+
+  .about-text {
+    padding: 0;
+  }
+
+  .about-text h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  /* .about-text p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 30px;
+  } */
+
+  .about-text .click {
+    margin: 0 auto;
+    display: inline-block;
+  }  #quote {
     padding: 25px;
   }
   #skills {
     padding: 25px;
   }
   #project {
-    padding: 25px;
+    padding: 5px;
   }
   .slider-wrapper {
     padding: 0;
+    width: 100%;
   }
   #contact {
     grid-template-columns: 1fr;
