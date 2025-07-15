@@ -239,7 +239,6 @@ header {
   color: #ffd36a;
   font-weight: 600;
   margin-bottom: 50px;
-  justify-self: left;
 }
 
 .about-text p {
@@ -340,7 +339,7 @@ header {
 }
 
 #projects {
-  padding: 100px 150px;
+  padding: clamp(60px, 8vw, 100px) clamp(20px, 5vw, 150px);
   text-align: center;
   width: 100%;
   grid-area: pro;
@@ -351,7 +350,6 @@ header {
   color: #ffd36a;
   font-weight: 600;
   margin-bottom: 70px;
-  justify-self: left;
 }
 
 .slider-wrapper {
@@ -608,12 +606,30 @@ footer {
   #skills {
     padding: 25px;
   }
-  #project {
-    padding: 60px 30px;
+#projects {
+    padding: 60px 20px;
   }
-  .slider-wrapper {
-    padding: 0;
-    width: 100%;
+
+  #projects h2 {
+    font-size: 2em;
+    margin-bottom: 40px;
+  }
+
+  .slider-track {
+    grid-auto-columns: 100%; /* Show one project per slide on small screens */
+  }
+
+  .project-card {
+    grid-template-columns: 1fr; /* Stack image and text vertically */
+    text-align: center;
+  }
+
+  .project-info {
+    text-align: center;
+  }
+
+  .project-link {
+    margin: 0 auto;
   }
   #contact {
     grid-template-columns: 1fr;
