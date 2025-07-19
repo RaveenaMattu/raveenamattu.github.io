@@ -82,8 +82,9 @@ body {
     position: fixed;
     top: 0;
     z-index: 3;
-    padding: 50px 100px;
-    padding-bottom: 10px;
+    /* background: #9e5c5c; */
+    padding: 5px 100px;
+    padding-top: 30px;
     align-items: center;
     filter: drop-shadow(0 2px 4px #2228311a);
   }
@@ -92,7 +93,7 @@ body {
     grid-area: log;
   }
     nav > div > img {
-      width: 50px;
+      width: 40px;
       height: auto;
     }
     nav > div:nth-child(2) {
@@ -213,7 +214,7 @@ header {
 }
 section {
   width: 100%;
-  padding: 100px 150px;
+  padding: 80px 150px;
 }
 
 
@@ -357,63 +358,66 @@ section {
   font-weight: 600;
   justify-self: left;
 }
-/* Wrapper for slider */
+.slider-container {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
 .slider-wrapper {
-  position: relative;
   width: 100%;
   padding: 2rem 1rem;
   overflow: hidden;
 }
 
-/* Slider buttons */
-.slider-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: #ffd36a;
-  border: none;
-  color: #000;
-  font-size: 2rem;
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-  z-index: 5;
-  border-radius: 50%;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-}
-.slider-btn.prev {
-  left: 10px;
-}
-.slider-btn.next {
-  right: 10px;
+
+.slider-track {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc(100% / 3.1);
+  gap: 1.5rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  padding-bottom: 1rem;
+  -webkit-overflow-scrolling: touch;
 }
 
-/* Track containing the cards */
+/* Hide scrollbars visually */
+.slider-track::-webkit-scrollbar {
+  display: none;
+}
 .slider-track {
-  display: flex;
-  gap: 1.5rem;
-  transition: transform 0.5s ease-in-out;
+  scrollbar-width: none;
+}
+.slider-btn {
+  border: none;
+  color: #ffd36a;
+  font-size: 4rem;
+  cursor: pointer;
+  background: transparent;
 }
 
 /* Project card layout */
 .project-card {
+  scroll-snap-align: start;
   background-color: #29303b;
   border-radius: 10px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-  min-width: 300px;
-  max-width: 480px;
-  flex: 0 0 auto;
   overflow: hidden;
-  padding: 1rem;
-}
-.project-img {
-  width: 100%;
-  height: 350px;
-  overflow: hidden;
-  border-radius: 10px;
-  align-self: center;
+  padding: 1rem 1.5rem;
+  display: grid;
+  grid-auto-flow: row;
 }
 
-/* Image on top */
+.project-img {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
 .project-img img {
   width: 100%;
   height: auto;
@@ -421,21 +425,25 @@ section {
   display: block;
 }
 
-/* Project info below */
 .project-info {
   padding: 1rem;
 }
 
 .project-info h3 {
-  font-size: 1.1rem;
-  margin: 0 0 0.5rem;
+  font-weight: 400;
   color: #ffd36a;
+  margin-bottom: 0.5rem;
+}
+.project-info p {
+  margin-bottom: 1rem;
 }
 
-.project-info p {
-  font-size: 0.95rem;
-  color: #e7e7e5;
-  margin: 0 0 3rem;
+.tech-used {
+  font-size: .9rem;
+  background: #222831;
+  color: #ffd36a;
+  padding: 0.1rem 1rem;
+  border-radius: 20px;
 }
 
 .project-link {
@@ -558,24 +566,6 @@ footer {
 
 
 /* Responsive */
-@media (max-width: 768px) {
-  section {
-    padding: 60px 50px;
-  }
-  .contact-container {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-
-  .contact-info p {
-    margin: 0 auto;
-  }
-
-  .contact-form {
-    width: 100%;
-  }
-}
-
 
 
 @media (max-width: 950px) {
@@ -612,11 +602,10 @@ footer {
     font-size: 1.2rem;
   }
   section {
-  padding: 50px 80px;
-}
+    padding: 40px 30px;
+  }
  #about {
     grid-template-columns: 1fr;
-    padding: 60px 30px;
     text-align: center;
   }
 
@@ -635,23 +624,15 @@ footer {
     text-align: center;
   }
 
-  /* .about-text p {
-    font-size: 0.95rem;
-    line-height: 1.5;
-    margin-bottom: 30px;
-  } */
-
   .about-text .click {
     margin: 0 auto;
     align-self: center;
     display: inline-block;
   } 
    #quote {
-    padding: 25px;
+    padding: 35px;
   }
-  #skills {
-    padding: 60px 30px;
-  }
+
 
   #skills h2 {
     font-size: 2em;
@@ -666,9 +647,6 @@ footer {
     width: 80px;
     height: 80px;
   }
-  #projects {
-    padding: 60px 30px;
-  }
 
   #projects h2 {
     font-size: 2em;
@@ -676,21 +654,24 @@ footer {
   }
 
 
+   .slider-track {
+    grid-auto-columns: calc(100% / 1)!important;
+  }
+
   .slider-wrapper {
-    padding: 2rem;
+    padding: 1.5rem 0.5rem;
+  }
+
+  .project-card {
+    padding: 1rem;
   }
 
   .slider-btn {
-    font-size: 2rem;
-    padding: 0.6rem 1.2rem;
+    font-size: 3rem;
   }
 
-  .project-img img {
-    height: 180px;
-  }
   #contact {
     grid-template-columns: 1fr;
-    padding: 60px 20px;
     gap: 30px;
   }
   .contact-info > h2 {
@@ -705,5 +686,14 @@ footer {
   footer {
     font-size: 0.7em;
     padding: 15px 0;
+  }
+}
+@media (max-width: 1200px) {
+  section {
+    padding: 60px 100px;
+  }
+
+   .slider-track {
+    grid-auto-columns: calc(100% / 2.1); /* Show 2 cards */
   }
 }

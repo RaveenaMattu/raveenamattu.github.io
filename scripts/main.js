@@ -227,4 +227,11 @@ document.getElementById("contactForm").addEventListener("submit", function(e) {
 function closeLightbox() {
   document.getElementById("thankYouLightbox").style.display = "none";
 }
-
+function slideProjects(direction) {
+  const track = document.getElementById('sliderTrack');
+  const cardWidth = track.querySelector('.project-card').offsetWidth + 24; // 24 for gap
+  track.scrollBy({
+    left: direction * cardWidth,
+    behavior: 'smooth'
+  });
+}
