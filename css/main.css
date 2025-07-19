@@ -565,7 +565,6 @@ footer {
 
 
 
-/* Responsive */
 
 
 @media (max-width: 950px) {
@@ -602,7 +601,7 @@ footer {
     font-size: 1.2rem;
   }
   section {
-    padding: 40px 30px;
+    padding: 40px 30px !important;
   }
  #about {
     grid-template-columns: 1fr;
