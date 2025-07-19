@@ -200,33 +200,31 @@ function slideProjects(direction) {
 }
 
 // Function to handle form submission
-document.getElementById("contactForm").addEventListener("submit", function(e) {
-  e.preventDefault(); // Prevent normal form submission
+ const form = document.getElementById('contactForm');
+  const confirmationMessage = document.getElementById('confirmationMessage');
 
-  const formData = new FormData(this);
+  form.addEventListener('submit', function(e) {
+    e.preventDefault(); // prevent default form submission
 
-  fetch("https://formsubmit.co/ajax/raveenamattu.dev@gmail.com", {
-    method: "POST",
-    headers: {
-      'Accept': 'application/json'
-    },
-    body: formData
-  })
-  .then(response => {
-    if (response.ok) {
-      // Show lightbox
-      document.getElementById("thankYouLightbox").style.display = "flex";
-      document.getElementById("contactForm").reset();
-    } else {
-      alert("Something went wrong. Please try again.");
-    }
-  })
-  .catch(error => alert("Error: " + error));
-});
+    const formData = new FormData(form);
 
-function closeLightbox() {
-  document.getElementById("thankYouLightbox").style.display = "none";
-}
+    fetch("https://formsubmit.co/ajax/raveenamattu.dev@gmail.com", {
+      method: "POST",
+      body: formData
+    })
+    .then(response => {
+      if (response.ok) {
+        form.reset(); // reset the form fields
+        confirmationMessage.style.display = "block"; // show thank you message
+      } else {
+        alert("Something went wrong. Please try again.");
+      }
+    })
+    .catch(error => {
+      console.error("Form submission error:", error);
+      alert("An error occurred. Please try again later.");
+    });
+  });
 function slideProjects(direction) {
   const track = document.getElementById('sliderTrack');
   const cardWidth = track.querySelector('.project-card').offsetWidth + 24; // 24 for gap
