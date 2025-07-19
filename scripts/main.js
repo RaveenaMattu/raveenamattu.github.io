@@ -199,5 +199,32 @@ function slideProjects(direction) {
   });
 }
 
+// Function to handle form submission
+document.getElementById("contactForm").addEventListener("submit", function(e) {
+  e.preventDefault(); // Prevent normal form submission
 
+  const formData = new FormData(this);
+
+  fetch("https://formsubmit.co/ajax/raveenamattu.dev@gmail.com", {
+    method: "POST",
+    headers: {
+      'Accept': 'application/json'
+    },
+    body: formData
+  })
+  .then(response => {
+    if (response.ok) {
+      // Show lightbox
+      document.getElementById("thankYouLightbox").style.display = "flex";
+      document.getElementById("contactForm").reset();
+    } else {
+      alert("Something went wrong. Please try again.");
+    }
+  })
+  .catch(error => alert("Error: " + error));
+});
+
+function closeLightbox() {
+  document.getElementById("thankYouLightbox").style.display = "none";
+}
 

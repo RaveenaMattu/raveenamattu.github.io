@@ -81,13 +81,15 @@
     </section>
     <section id="projects">
       <h2>PROJECTS</h2>
+
       <div class="slider-wrapper">
         <button class="slider-btn prev" onclick="slideProjects(-1)">&#10094;</button>
+
         <div class="slider-track" id="sliderTrack">
           <!-- 1st: image left, text right -->
           <div class="project-card">
             <div class="project-img">
-              <img src="assets/images/site1.png" alt="Portfolio Site 1">
+              <img src="assets/images/design3.png" alt="Portfolio Site 1">
             </div>
             <div class="project-info">
               <h3>Portfolio Website</h3>
@@ -122,7 +124,18 @@
 
           <div class="project-card">
             <div class="project-img">
-              <img src="assets/images/site4.png" alt="E-commerce Site">
+              <img src="assets/images/game.png" alt="E-commerce Site">
+            </div>
+            <div class="project-info">
+              <h3>Kids Play and Learn Game</h3>
+              <p>A clean layout for an online store using HTML and CSS Grid.</p>
+              <a href="#" target="_blank" class="project-link">View Site →</a>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-img">
+              <img src="assets/images/design5.png" alt="E-commerce Site">
             </div>
             <div class="project-info">
               <h3>E-commerce Layout</h3>
@@ -157,7 +170,7 @@
           <!-- 3rd: image left, text right -->
           <div class="project-card">
             <div class="project-img">
-              <img src="assets/images/design3.png" alt="Design Showcase">
+              <img src="assets/images/design4.png" alt="Design Showcase">
             </div>
             <div class="project-info">
               <h3>Design Showcase</h3>
@@ -168,14 +181,14 @@
 
           <div class="project-card">
             <div class="project-img">
-              <img src="assets/images/design4.png" alt="E-commerce Site">
+              <img src="assets/images/site1.png" alt="E-commerce Site">
             </div>
             <div class="project-info">
               <h3>Urban Glide Skateboards</h3>
               <p>A clean layout for an online store using HTML and CSS Grid.</p>
               <a href="#" target="_blank" class="project-link">View Site →</a>
             </div>
-          </div>
+          </div>      
         </div>
         <button class="slider-btn next" onclick="slideProjects(1)">&#10095;</button>
       </div>
@@ -192,13 +205,19 @@
             want to connect, feel free to reach out — I’d love to hear from you!
           </p>
         </div>
-        <form class="contact-form" target="_blank" action="https://formsubmit.co/raveenamattu.dev@gmail.com" method="POST">
+        <form class="contact-form" target="_blank" action="https://formsubmit.co/raveenamattu.dev@gmail.com" method="POST" id="contactForm" onsubmit="openLightbox(event)">
           <input type="text" name="name" placeholder="Enter your name" required>
           <input type="email" name="email" placeholder="Enter your email address" required>
           <textarea name="message" placeholder="Enter your message" required></textarea>
           <button type="submit">Send Message</button>
         </form>
     </section>
+    <div id="thankYouLightbox" class="lightbox">
+      <div class="lightbox-content">
+        <p>Thank you! Your message has been sent.</p>
+        <button onclick="closeLightbox()">Close</button>
+      </div>
+    </div>
   </main>
   <footer>
       <p>© 2025 Raveena Mattu Designs. All Rights Reserved.</p>
