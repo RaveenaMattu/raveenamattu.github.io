@@ -9,6 +9,18 @@
   <script src="scripts/main.js" defer></script>
 </head>
 <body>
+  <div id="projectLightbox" class="projectLightbox">
+    <div class="projectLightbox-content">
+      <div class="projectLightbox-thumbnails" id="projectLightboxThumbs">
+        <!-- Thumbnails go here -->
+      </div>
+      <span class="projectLightbox-close">&times;</span>
+      <div class="projectLightbox-preview">
+        <img id="projectLightboxMain" src="" alt="Main Preview">
+      </div>
+    </div>
+  </div>
+
   <div id="hamburger" onclick="toggleMenu();">
     <div class="bar"></div>
     <div class="bar"></div>
@@ -139,7 +151,7 @@
                 <span class="tech-used">CSS</span>
                 <span class="tech-used">JS</span>
               </p>
-              <a href="#" target="_blank" class="project-link">View Site →</a>
+              <a href="#" target="_blank" id="game" class="project-link">View Site →</a>
             </div>
           </div>
 
@@ -193,7 +205,7 @@
               <p>
                 <span class="tech-used">XD</span>
               </p>
-              <a href="#" target="_blank" class="project-link">View Site →</a>
+              <a href="#" id="market" target="_blank" class="project-link">View Site →</a>
             </div>
           </div>
 
@@ -207,7 +219,7 @@
                 <span class="tech-used">HTML</span>
                 <span class="tech-used">CSS</span>
               </p>
-              <a href="#" target="_blank" class="project-link">View Site →</a>
+              <a href="#" id="trios" target="_blank" class="project-link">View Site →</a>
             </div>
           </div> 
           

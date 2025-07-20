@@ -239,3 +239,66 @@ function slideProjects(direction) {
     behavior: 'smooth'
   });
 }
+
+const projectScreenshots = {
+  "trios": [
+    "assets/screenshots/trios1.png",
+    "assets/screenshots/trios2.png",
+    "assets/screenshots/trios3.png",
+    "assets/screenshots/trios4.png",
+    "assets/screenshots/trios5.png",
+    "assets/screenshots/trios6.png",
+  ],
+  "game": [
+    "assets/screenshots/game1.png",
+    "assets/screenshots/game2.png",
+    "assets/screenshots/game3.png",   
+    "assets/screenshots/game4.png",
+    "assets/screenshots/game5.png",
+    "assets/screenshots/game6.png",
+    "assets/screenshots/game7.png",
+  ],
+  "market": [
+    "assets/screenshots/market.png",
+  ]
+  // Add more project screenshot arrays here
+};
+
+document.querySelectorAll('.project-link').forEach(link => {
+  link.addEventListener('click', function(e) {
+    e.preventDefault();
+    const projectKey = this.id;
+    openProjectLightbox(projectScreenshots[projectKey]);
+  });
+});
+
+function openProjectLightbox(images) {
+  const lightbox = document.querySelector('#projectLightbox');
+  const preview = document.querySelector('#projectLightboxMain');
+  const thumbnails = document.querySelector('#projectLightboxThumbs');
+
+  thumbnails.innerHTML = "";
+
+  if (images && images.length) {
+    preview.src = images[0];
+
+    images.forEach((imgSrc, index) => {
+      const thumb = document.createElement('img');
+      thumb.src = imgSrc;
+      if (index === 0) thumb.classList.add('active');
+      thumb.addEventListener('click', () => {
+        preview.src = imgSrc;
+        document.querySelectorAll('#projectLightboxThumbs img').forEach(img => img.classList.remove('active'));
+        thumb.classList.add('active');
+      });
+      thumbnails.appendChild(thumb);
+    });
+
+    lightbox.classList.add('show');
+  }
+}
+
+document.querySelector('.projectLightbox-close').addEventListener('click', () => {
+  document.querySelector('#projectLightbox').classList.remove('show');
+});
+
