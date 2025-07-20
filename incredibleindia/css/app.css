@@ -1,0 +1,1005 @@
+*{
+  margin:0;
+  padding:0;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+body{
+  width: 100%;
+  font-family: 'optima';
+}
+#mobileNav {
+  width: 90px;
+  height: 70px;
+  position: fixed;
+  z-index: 7;
+  top: 15px;
+  right: 29px;
+  cursor: pointer;
+  visibility: hidden;
+}
+  .bar {
+    width: 50px;
+    height: 10px;
+    margin: 4px auto;
+    background: #fff;
+    border-radius: 4px;
+  }
+#menu {
+  width: 250px;
+  height: 100vh;
+  background: #000;
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  right: -260px;
+  padding-top: 120px;
+  padding-left: 21px;
+}
+  #menu > a {
+    display: block;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.5em;
+    padding: 20px;
+    padding-right: 50px;
+    border-bottom: 1px solid #fff;
+  }
+  #menu > a:hover {
+    color: #b80303;
+  }
+nav {
+  width: 100%;
+  height: 80px;
+  padding: 25px;
+  background: #000; 
+  filter: drop-shadow(2px 2px 8px #000);
+  text-align: center;
+  position: fixed;
+  z-index:3;
+}
+#logo {
+  transform: translateY(10px);
+  filter: drop-shadow(2px 2px 8px #000);
+}
+#links {
+  transform: translateY(-10px);
+}
+#links > a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1.5em;
+  margin: 0 40px;
+}
+nav > #links > a:hover {
+  color: #b80303;
+}
+header {
+  width: 100%;
+  height: 800px;
+  background:linear-gradient(rgba(0, 0, 0, 0.219),rgba(0, 0, 0, 0.219)), url('../assets/images/header1.jpg');
+  background-size: cover;
+  color: #fff;
+}
+  header > h1 {
+    text-align: center;
+    padding:100px;
+    padding-top: 300px;
+    font-size: 4.5em;
+    filter: drop-shadow(5px 5px 7px #000);
+  }
+  #india {
+    font-size: 1.5em;
+    color: #b80303;
+  }
+main {
+  width: 100%;
+  min-height: 1800px;
+  }    
+  #asideRight{
+    width: 40%;
+    padding: 0 80px;
+    float: left;
+  }
+    #time {
+      width: 100%;
+      margin-top: 50px;
+      padding-bottom: 50px;
+      float: right;
+      /* background: #000000; */
+    }
+      iframe {
+        width: 100%;
+        height: 200px;
+        border: 2px solid #000;
+        color:#f00;
+      }
+    #trending {
+      width: 100%;
+    }
+      #trending > img {
+        width: 100%;
+        height: auto;
+      }
+      #trending > p {
+        padding: 30px 0;
+        color: #6d6c6c;
+      }
+    #topRight > h1 {
+      font-size: 2.5em;
+      padding: 40px 50px;
+      text-align: center;
+    }
+    .topRightRow {
+      width: 100%;
+      padding: 30px 0;
+      padding-bottom: 35px;
+      text-align: left;
+      /*background: #0000002d;*/
+      border-top: 1px solid #000;
+    }
+      .topRightRow > p {
+        padding-top: 15px;
+        text-align: left;
+        color: #248cdc;
+      }
+      .topRightRow > a {
+        color: #b80303;
+        float: right;
+      }
+  #asideLeft{
+    width: 60%;
+    float: left;
+  }
+    .mainRow {
+      width: 100%;
+      min-height: 300px;
+      padding: 0 50px;
+      margin-top: 50px;
+    }
+      .left {
+        width: 40%;
+        height: 300px;
+        float: left;
+      }
+        #img {
+          width: 100%;
+          height: 292px;
+        }
+      .right {
+        width: 60%;
+        min-height: 300px;
+        float: left;
+      }
+        .aboutText {
+          padding: 30px 50px;
+          min-height: 300px;
+        }
+          .aboutText > h1 {
+            height: 40px;
+            padding: 0 20px;
+            font-size: 1.5em;
+            color: #000000;
+          }
+          .aboutText > p {
+            padding-top: 25px;
+            font-size: 1em;
+            color: #6d6c6c;
+          }
+        .right > button {
+          margin: -60px 20px;
+          text-align: center;
+          height: 40px;
+          width: 120px;
+          border: none;
+          border-radius: 5px;
+          font-size: .9em;
+          background: #b80303;
+          padding: 5px;
+          color:#fff;
+          float: right;
+        }
+    #leftCol1{
+      border: 4px solid #476824;
+    }
+    #rightCol1 > .aboutText > h1 {
+      /*background: #476824;*/
+      padding: none;
+      border-bottom: 2px solid #476824 ;
+    }
+    #leftCol2{
+      border: 4px solid #b56e3f;
+    }
+    #rightCol2 > .aboutText > h1 {
+      /*background: #476824;*/
+      border-bottom: 2px solid #b56e3f ;
+    }
+    #leftCol3{
+      border: 4px solid #5db1be;
+    }
+    #rightCol3 > .aboutText > h1 {
+      /*background: #476824;*/
+      border-bottom: 2px solid #5db1be ;
+    }
+    #leftCol4{
+      border: 4px solid #6d2b90;
+    }
+    #rightCol4 > .aboutText > h1 {
+      /*background: #476824;*/
+      border-bottom: 2px solid #6d2b90 ;
+    }
+    #leftCol5{
+      border: 4px solid #c3ac46;
+    }
+    #rightCol5 > .aboutText > h1 {
+      /*background: #476824;*/
+      border-bottom: 2px solid #c3ac46 ;
+    }
+/* The switch wrapper */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  /* background: #ccc; */
+}
+
+/* Hide default checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider background */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+/* The slider circle */
+.slider::before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+/* When checked, move the slider and change color */
+input:checked + .slider {
+  background-color: #248cdc;
+}
+
+input:checked + .slider::before {
+  transform: translateX(26px);
+}
+
+/*//////////////////////////////////*/
+  /*///////// DESTINATION PAGE////////*/
+  /*//////////////////////////////////*/
+  #dHeader {
+    background: linear-gradient(rgba(255, 255, 255, 0.219),rgba(255, 255, 255, 0.219)),url('../assets/images/dHeader.jpg');
+    background-size: cover;
+  }
+  #dMain {
+    width: 100%;
+    min-height: 1500px;    
+  }
+  #dLeft {
+    width: 50%;
+    float: left;
+    min-height: 500px;
+    padding-right: -5px;
+    /*background: #eee;*/
+  }
+  #dRight {
+    width: 50%;
+    float: left;
+    min-height: 500px;
+    padding-left: -5px;
+    /*background: #ccc;*/
+  }
+  .thumbs {
+    width: 100px;
+    height: 120px;
+  }
+  .zones {
+    width: 33%;
+    float: left;
+    padding-top: 50px;
+    /*background: #c1c0c0;*/
+    text-align: center;    
+  }
+  .zones > h4 {
+    padding-top: 20px;
+    color:#248cdc;
+  }
+  .zones > ul {
+    padding-top: 20px;
+    text-align: left;
+  }
+  .zones > ul > li {
+    list-style-type: none;
+    padding-top: 7px;
+    text-align: center;
+  }
+  .zones > ul > li > a {
+    text-decoration: none;
+    color: #6d6c6c;
+  }
+  .zones > ul > li > a:hover {
+    text-decoration: none;
+    color: #b80303;
+  }
+  #desc {
+    width: 100%;
+    min-height: 500px;
+    /*background: #6f6b6b;*/
+    text-align: center;
+    clear: both;
+    color: #fff;
+    padding: 50px;
+  }
+  #descLeft {
+    width: 40%;
+    float: left;
+    min-height: 400px;
+    /*background: #eee;*/
+  }
+    #destination {
+      width: 100%;
+      height: 400px;
+    }
+  #descRight {
+    width: 60%;
+    float: left;
+    min-height: 400px;
+    padding: 10px 30px;
+    background: #000000;
+  }
+    #descRight > h1 {
+      width: 100%;
+      padding: 50px 0;
+      font-size: 2.5em;
+      font-weight: 600;
+      text-align: center;
+    }
+    #descRight > p {
+      font-size: 1.2em;
+      text-align: justify;
+    }
+    #descRight > button {
+      margin: 50px 20px;
+      text-align: center;
+      height: 40px;
+      width: 120px;
+      border: none;
+      border-radius: 5px;
+      font-size: .9em;
+      background: #b80303;
+      padding: 5px;
+      color:#fff;
+      float: right;
+    }
+    #descRight > button:hover {
+      background: #fff;
+      color:#b80303;
+    }
+  #major {
+    width: 100%;
+    min-height: 500px;
+    background: linear-gradient(rgb(143, 2, 2), rgb(0,0,0), rgb(0,0,0));
+    text-align: center;
+    clear: both;
+    color: #fff;
+  }
+  #major > h1 {
+    padding: 50px 0;
+    font-size: 5.5em;
+    font-weight: 600;
+  }
+    .wrap {
+      display: inline;
+      position: relative;
+    }
+      .cities {
+        width: 19%;
+        height: auto;
+        padding: 10px;
+        padding-bottom: 80px;
+      }
+      .cities:hover {
+        padding: 0 10px;
+      }  
+      .cityName {
+        position: absolute;
+        bottom: 100px; /* Distance from the bottom */
+        left: 50%;
+        transform: translateX(-50%);
+        color: white;
+        font-size: 1.5em;
+        font-weight: 700;
+        text-align: center;
+        width: 90%;
+      }
+    #major > button {
+      margin: 50px 20px;
+      text-align: center;
+      height: 50px;
+      width: 250px;
+      border: none;
+      border-radius: 5px;
+      font-size: 1.2em;
+      background: #b80303;
+      padding: 5px;
+      color:#fff;
+    }
+    #major > button:hover {
+      background: #fff;
+      color:#b80303;
+    }
+  /*//////////////////////////////////*/
+  /*/////////    PLAN PAGE    ////////*/
+  /*//////////////////////////////////*/
+  #pHeader {
+    background: linear-gradient(rgba(255, 255, 255, 0.219),rgba(255, 255, 255, 0.219)),url('../assets/images/pHeader.jpg');
+    background-size: cover;
+  }
+  #pMain {
+    width: 100%;
+    min-height: 1000px;
+  }
+    #pTop {
+      /*background: #ddd;*/
+      width: 100%;
+      min-height: 250px;
+      padding: 50px 100px;
+      text-align: center;
+      font-size: 2em;
+    }
+      #pTop > select {
+        width: 50%;
+        height: 50px;
+        font-size: .7em;
+        padding: 5px;
+        padding-left: 15px;
+        margin-top: 80px;
+        border: 2px solid #b80303;
+        color: #b80303;
+      }
+        #pTop > select > option {
+          background: #fff;
+          border: 2px solid #b80303;
+          color: #b80303;
+        }
+      #pTop > button {
+        height: 50px;
+        width: 150px;
+        font-size: .7em;
+        background: #b80303;
+        color: #fff;
+        border: none;
+      }
+    #pInfo {
+      width: 100%;
+      /*background: #eee;*/
+      padding: 50px 100px;
+      font-size: 1.1em;
+      color: #6d6c6c;
+      text-align: justify;
+    }
+      #pInfo > p > a {
+        text-decoration: none;
+        color: #b80303;
+      }
+    #pInfoLeft {
+      width: 50%;
+      float: left;
+      padding: 30px 100px;
+      padding-right: 50px;
+      min-height: 550px;
+      /*background: #ddd;*/
+      /*border-right: 1px solid #535252;*/
+    }    
+    #pInfoRight {
+      width: 50%;
+      float: left;
+      padding: 30px 100px;
+      padding-left: 50px;
+      min-height: 550px;
+      /*background: #ccc;*/
+    }
+      #pInfoRight > ol {
+        padding: 10px 50px;
+      }
+      #pInfoRight > ol > li {
+        padding: 5px;
+        color: #6d6c6c;
+        font-size: 1.1em;
+      }
+    .infoHeading {
+      padding: 20px 0;
+      font-size: 1.5em;
+      color: #000;
+      text-align: center;
+    }
+    .infoP {
+      padding: 10px 0;
+      text-align: justify;
+      font-size: 1.1em;
+      color: #6d6c6c;
+    }
+    #pBottom {
+      width: 100%;
+      min-height: 400px;
+      /*background: #919191;*/
+      text-align: center;
+      clear: both;
+      padding: 50px 150px;
+    }
+    .visaInfo {
+      float: left;
+      width: 23%;
+      height: 200px;
+      background: #b80303;
+      color: #ffffff;
+      font-size: 1.7em;
+      position: relative; /* Needed for absolute positioning */
+      margin-left: 20px;
+    }
+      .visa {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%); /* Centers the text */
+          text-align: center;
+      }
+    .visaInfo:hover {
+      background: #fdebeb;
+      color: #b80303;
+      border: 1px solid #b80303;
+      filter: drop-shadow(2px 2px 8px #929292);
+    }
+    #know {
+      /*background: #c0bebe;*/
+      color: #000000;
+      font-weight: 700;
+      width: 25%;
+      height: 200px;
+      position: relative; /* Enables absolute positioning for h1 */
+      float: left; /* Aligns it beside .visaInfo */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-size: 3em;
+    }
+/*//////////////////////////////////*/
+/*/////////  CONTACT PAGE   ////////*/
+/*//////////////////////////////////*/
+#cHeader {
+  background: linear-gradient(rgba(255, 255, 255, 0.219),rgba(255, 255, 255, 0.219)),url('../assets/images/cHeader.jpeg');
+  background-size: cover;
+}
+#cMain {
+  min-height: 900px;
+}
+  #hubLeft {
+    width: 50%;
+    float: left;
+    min-height: 900px;
+    padding-top: 100px;
+    padding-left: 70px;
+    color: #6d6c6c;
+    text-align: justify;
+    /*background: #eee;*/
+  }
+    #hubLeft > h2 {
+      font-size: 3em;
+      padding-bottom: 50px;
+      text-align: center;
+      color: #000;
+    }
+    #hubLeft > p {
+      padding: 5px 0;
+    }
+    #hubLeft > h3 {
+      padding: 25px 0;
+      color: #000;
+    }
+    #hubLeft > ol {
+      padding-left: 30px;
+      padding-bottom: 25px;
+    }
+    #hubLeft > ol > li {      
+      padding: 5px;
+      color: #6d6c6c;
+    }
+    #hubLeft > ol > li > a {
+      text-decoration: none;
+      color: #b80303;      
+    }
+    .red {
+      color: #ec0303;
+    }
+
+  #hubRight {
+    width: 50%;
+    float: left;
+    /*background: #aaa;*/
+    min-height: 900px;
+    padding: 70px 100px;
+    padding-top: 130px;
+  }
+  /*//////////////////////////////////*/
+  /*/////////   CONTACT FORM   ////////*/
+  /*//////////////////////////////////*/
+  #contactForm {
+    padding: 50px 20px;
+    background: #2f60a0a5;
+    background: linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),url('../assets/images/contactBkg.jpg');
+    background-size: cover;
+    width: 100%;
+    text-align: center;
+  }
+    #contactForm > p {
+      padding-bottom: 20px;
+      font-size: 1em;
+      text-align: center;
+      color: #fff;
+    }
+    .formRow {
+      width: 100%;
+      text-align: center;
+      padding-top: 40px;
+      overflow: hidden;      
+    }
+      .formRow > input, textarea {
+        border: 1px solid #d3d2d2;
+        background: #fff;
+        width: 70%;
+        height: 40px;
+        padding-left: 10px;
+        font-size: 1em;
+        border-radius: 4px;
+      }
+      .formRow > textarea {
+        height: 100px;
+        font-family: 'Arial';
+        padding: 5px 10px;
+      }
+    input[type='email']{
+      border: 1px solid #d3d2d2;
+    }
+    input[type='text']:hover {
+      border: 1px solid #c1eafc;
+    }
+    input[type='email']:hover {
+      border: 1px solid #c1eafc;
+    }
+    textarea:hover {
+      border: 1px solid #c1eafc;
+    }
+    #contactForm > button {
+      font-family: 'Optima';
+      height: 60px;
+      width: 50%;
+      border: none;
+      font-size: 1.2em;
+      background: #b80303;
+      color: #fff;
+      margin-top: 50px;
+      font-weight: 700;
+    }
+    #contactForm > button:hover {
+      background: #fff;
+      color: #b80303;
+      border: 2px solid #b80303;
+    }
+/*//////////////////////////////////*/
+/*/////////       FOOTER    ////////*/
+/*//////////////////////////////////*/
+footer {
+  width: 100%;
+  min-height: 550px;
+  background: url('../assets/images/footerBkg.png');
+  background-size: cover;
+  padding: 50px 100px;
+  padding-bottom: 0;
+}
+  #topFooter {
+    width: 100%;
+    padding: 50px 100px;
+    color: #fff;
+    min-height: 400px;
+    background: #ffffff31;
+  }
+    .topLeft{
+      /*background: #878686;*/
+      width: 33%;
+      float: left;
+      padding: 20px;
+    }
+    .topCenter{
+      /*background: #ffffff;*/
+      width: 33%;      
+      float: left;
+      padding: 20px;
+    }
+    .topCenter > a {
+      text-decoration: none;
+      font-size: 1.3em;
+      color: #ffffff;
+      display: block;
+      padding: 10px 0;
+    }
+    .topRight {
+      /*background: #ababab;*/
+      width: 33%;
+      float: left;
+      padding: 20px;
+    }
+    .topRight > p {
+      padding: 10px 0;
+    }
+    #socialIcons {
+      width: 100%;
+      padding: 20px 0;
+    }
+      .icons {
+        width: 50px;
+        height: 50px;
+        margin: 0 5px;
+      }
+  #bottomFooter {
+    font-size: 1em;
+    padding: 40px;
+    text-align: center;
+    border-top: 1px solid #fff;
+    color: #ffffff;
+  }
+/*//////////////////////////////////*/
+/*/////////MEDIA-QUERY 1250PX///////*/
+/*//////////////////////////////////*/
+@media (max-width: 1250px) {
+  #asideLeft {
+    width: 100%;
+    float: none;
+  }
+  #asideRight {
+    width: 100%;
+    float: none;
+    padding-bottom: 20px;
+  }
+  .mainRow {
+    padding: 0 80px;
+  }
+  .left {
+    width: 80%;
+    height: 500px;
+    float: none;
+    margin: 0 auto;
+  }
+    #img {
+      width: 100%;
+      height: 492px;
+    }
+  .right {
+    width: 100%;
+    float: none;
+    padding: 0 10px;
+    font-size: 1.2em;
+  }
+  /*//////////////////////////////////*/
+  /*///////// DESTINATION PAGE////////*/
+  /*//////////////////////////////////*/
+  #dLeft {
+    width: 100%;
+    float: none;
+    padding: 0 20px;
+  }
+  #dRight {
+    width: 100%;
+    float: none;
+    padding: 0 20px;
+  }
+  #descLeft {
+    width: 100%;
+    float: none;
+    padding-bottom: 0;
+    /*background: #eee;*/
+  }
+    #destination {
+      width: 100%;
+      height: auto;
+    }
+  #descRight {
+    width: 100%;
+    float: none;
+  }
+    #descRight > h1 {
+      width: 100%;
+      font-size: 2em;
+      font-weight: 600;
+      text-align: center;
+    }
+    #descRight > p {
+      font-size: 1.2em;
+      text-align: justify;
+    }
+    #descRight > button {
+      margin-top: 25px;
+    }
+  #major {
+    min-height: 200px;
+  }
+  #major > h1 {
+    font-size: 2.5em;
+  }
+  .cityName {
+    position: absolute;
+    bottom: 100px; /* Distance from the bottom */
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: .9em;
+    font-weight: 700;
+    text-align: center;
+    width: 90%;
+  }
+  #major > button {
+    height: 40px;
+    width: 150px;
+    font-size: 1em;
+  }
+  /*//////////////////////////////////*/
+  /*/////////       PLAN       ////////*/
+  /*//////////////////////////////////*/
+  #pTop > select {
+    font-size: .5em;
+    padding-left: 5px;
+  }
+  #pTop > button {
+    font-size: .5em;
+  }
+  #pInfo {
+    padding: 50px 100px;
+  }
+  #pInfoLeft {
+    width: 100%;
+    float: none;
+    padding: 30px 100px;
+    min-height: 400px;
+    /*background: #ddd;*/
+  }    
+  #pInfoRight {
+    width: 100%;
+    float: none;
+    padding: 30px 100px;
+    min-height: 300px;
+    /*background: #ccc;*/
+  }
+  #pBottom {
+    /*background: #6d6c6c;*/
+    padding: 10px 100px;
+    padding-bottom: 50px;
+
+  }
+  #know {
+    width: 100%;
+    text-align: center;
+    padding-top: 0;
+    background: #fff;
+    font-size: 4.5em;
+    clear: both; /* Ensures it doesn’t overlap */
+}
+  .visaInfo {
+    float: none;
+    clear:both;
+    width: 100%;
+    height: 200px;
+    margin: 20px 0;
+  }
+  /*//////////////////////////////////*/
+  /*/////////     CONTACT     ////////*/
+  /*//////////////////////////////////*/
+  #hubLeft {
+    width: 100%;
+    float: none;
+    padding: 100px 120px;
+    padding-bottom: 0;
+    min-height: 700px;
+  }
+  #hubRight {
+    width: 100%;
+    float: none;
+    padding: 50px 120px;
+    min-height: 700px;
+  }
+  .formRow > input, textarea {
+    width: 60%;
+    font-size: .9em;
+  }
+  #contactForm > button {
+    font-size: 1em;
+    font-weight: 500;
+    height: 50px;
+  }
+  /*//////////////////////////////////*/
+  /*/////////     FOOTER     ////////*/
+  /*//////////////////////////////////*/
+  #topFooter {
+    padding: 10px 50px;
+  }
+    .topLeft{
+      /*background: #878686;*/
+      width: 100%;
+      float: none;
+      text-align: center;
+      padding: 20px;
+    }
+    .topCenter{
+      width: 50%;
+      margin: 0 auto;      
+    }
+    .topCenter > a {
+      font-size: 1em;
+      padding: 5px 0;
+    }
+    .topRight {
+      width: 50%;
+      margin: 0 auto;
+    }
+}
+/*//////////////////////////////////*/
+/*/////////MEDIA-QUERY 1010PX///////*/
+/*//////////////////////////////////*/
+@media (max-width: 1010px) {
+  #links {
+    visibility: hidden;
+  }
+  #logo {
+    visibility: visible;
+  }
+  #mobileNav { 
+    visibility: visible;
+  }
+  /*//////////////////////////////////*/
+  /*/////////     CONTACT     ////////*/
+  /*//////////////////////////////////*/
+  #hubRight {
+    padding: 50px 80px;
+  }
+  /*//////////////////////////////////*/
+  /*/////////     FOOTER     ////////*/
+  /*//////////////////////////////////*/
+  footer {
+    min-height: 500px;
+  }
+    #topFooter {
+      min-height: 350px;
+    }
+    .topCenter > h1 {
+      font-size: 1.5em;
+    }
+    .topRight > h1 {
+      font-size: 1.5em;
+    }
+    .icons {
+      width: 30px;
+      height: 30px;
+      margin: 0 5px;
+    }
+}
