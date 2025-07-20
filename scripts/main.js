@@ -1,3 +1,7 @@
+/*=======================================*/
+/*==========  HAMBURGER MENU  ===========*/
+/*=======================================*/
+
 let menuOpen = false; // either true or false
 
 function toggleMenu() {
@@ -15,7 +19,9 @@ function toggleMenu() {
   menuOpen = !menuOpen;
 } // toggleMenu()
 
-// let header = document.querySelector('header');
+/*=======================================*/
+/*======= TEXT FOR ROTATING CIRCLE ======*/
+/*=======================================*/
 let door = document.querySelector('#door');
 let codingLang = ['PHP', 'HTML', 'CSS', 'JS', 'Python', 'Java', 'PS', 'XD', 'Ai', 'React', 'Swift'];
 const techText = document.getElementById('techText');
@@ -45,137 +51,16 @@ let textAlign = ['left', 'right', 'center', 'justify'];
     techText.style.color = color[Math.floor(Math.random() * color.length)];
   }
 
-  // Change text every 2 seconds (optional)
+  // Text change every 2 seconds
   setInterval(setRandomTech, 2000);
 
   // Set initial value
   setRandomTech();
 
-// function createGrid() {
-// let squareSize = 150; // You can adjust this for different sizes
-// let cols = Math.ceil(window.innerWidth / squareSize);
-// let rows = Math.ceil(window.innerHeight / squareSize);
 
-
-//   for (let i = 0; i < rows; i++) {
-//     for (let j = 0; j < cols; j++) {
-//       let square = document.createElement('div');
-//       let randomIndex = Math.floor(Math.random() * codingLang.length);
-//       square.index = randomIndex; // store the index for syncing text/icon
-//       square.innerText = codingLang[randomIndex];     
-//       // start animation loop
-//       setInterval(function () {
-//         square.style.opacity = 0;
-//         square.style.transition = 'opacity 4s ease';
-      
-//         setTimeout(function () {
-//           if (square.innerText === codingLang[randomIndex]) {
-//             // switch to icon
-//             square.innerHTML = `<img src="${codingIcons[randomIndex]}" style="width: 40px; height: 40px;">`;
-//           } else {
-//             // switch back to text
-//             square.innerText = codingLang[randomIndex];
-//           }
-//           square.style.opacity = .5;
-//         }, 4000); // wait for fade-out to finish
-      
-//       }, 4000 + Math.random() * 12000);
-      
-//       square.textContent = codingLang[Math.floor(Math.random() * codingLang.length)];
-//       square.setAttribute('class', 'square');
-//       square.style.position = 'absolute'; 
-//       square.style.fontWeight = fontWeight[Math.floor(Math.random() * fontWeight.length)];
-//       square.style.fontSize = fontSize[Math.floor(Math.random() * fontSize.length)];
-//       square.style.textAlign = textAlign[Math.floor(Math.random() * textAlign.length)];
-//       square.style.width = squareSize + 'px';
-//       square.style.height = squareSize + 'px';
-//       const offset = (i % 2 === 0) ? 0 : squareSize / 2;
-//       square.style.left = (j * squareSize + offset) + 'px';
-//       square.style.top = (i * squareSize) + 'px';
-
-//      header.appendChild(square); 
-//     }
-//   }
-// }
-
-// function createGrid() {
-//   const squareSize = 175;
-//   const cols = Math.ceil(window.innerWidth / squareSize);
-//   const rows = Math.ceil(window.innerHeight / squareSize);
-
-//   for (let i = 0; i < rows; i++) {
-//     for (let j = 0; j < cols; j++) {
-//       const square = document.createElement('div');
-//       const randomIndex = Math.floor(Math.random() * codingLang.length);
-
-//       // Decide randomly whether to show text or icon initially
-//       const showText = Math.random() < 0.5;
-
-//       if (showText) {
-//         square.textContent = codingLang[randomIndex];
-//         square.dataset.type = "text";
-//       } else {
-//         square.innerHTML = `<img src="${codingIcons[randomIndex]}" style="width: 40px; height: 40px;">`;
-//         square.dataset.type = "icon";
-//       }
-
-//       square.dataset.index = randomIndex;
-//       square.className = 'square';
-//       square.style.position = 'absolute';
-//       square.style.fontWeight = fontWeight[Math.floor(Math.random() * fontWeight.length)];
-//       square.style.fontSize = fontSize[Math.floor(Math.random() * fontSize.length)];
-//       square.style.textAlign = textAlign[Math.floor(Math.random() * textAlign.length)];
-//       square.style.width = squareSize + 'px';
-//       square.style.height = squareSize + 'px';
-//       const offset = (i % 2 === 0) ? 0 : squareSize / 2;
-//       square.style.left = (j * squareSize + offset) + 'px';
-//       square.style.top = (i * squareSize) + 'px';
-//       square.style.opacity = 0.5; // Initial opacity
-
-//       // Start animation loop
-//       setInterval(() => {
-//         square.style.opacity = 0;
-//         square.style.transition = 'opacity 4s ease';
-
-//         setTimeout(() => {
-//           const index = parseInt(square.dataset.index);
-//           const currentType = square.dataset.type;
-
-//           if (currentType === "text") {
-//             square.innerHTML = `<img src="${codingIcons[index]}" style="width: 40px; height: 40px;">`;
-//             square.dataset.type = "icon";
-//           } else {
-//             square.textContent = codingLang[index];
-//             square.dataset.type = "text";
-//           }
-
-//           square.style.opacity = 0.5;
-//         }, 4000);
-//       }, 4000 + Math.random() * 12000);
-
-//       header.appendChild(square);
-//     }
-//   }
-// }
-
-
-// // Create grid on load
-// createGrid();
-// // Optional: Recreate grid on window resize
-// window.addEventListener('resize', () => {
-//   header.innerHTML = ''; // Clear existing squares
-//   createGrid();
-// });
-
-// function openLightbox() {
-//   document.getElementById('resumeLightbox').style.display = 'flex';
-// }
-
-// function closeLightbox() {
-//   document.getElementById('resumeLightbox').style.display = 'none';
-// }
-
-
+/*=======================================*/
+/*======= PROJECTS SLIDER FUNCTION ======*/
+/*=======================================*/
 
 let currentIndex = 0;
 
@@ -198,39 +83,6 @@ function slideProjects(direction) {
     behavior: 'smooth'
   });
 }
-
-
-  const form = document.getElementById('contactForm');
-  const lightbox = document.getElementById('thankYouLightbox');
-
-  form.addEventListener('submit', function (e) {
-    e.preventDefault(); // stop default behavior
-
-    const formData = new FormData(form);
-
-    fetch('https://formsubmit.co/ajax/raveenamattu.dev@gmail.com', {
-      method: 'POST',
-      headers: {
-        'Accept': 'application/json'
-      },
-      body: formData
-    })
-      .then(response => {
-        if (response.ok) {
-          lightbox.style.display = 'block';
-          form.reset();
-        } else {
-          alert("Something went wrong. Please try again.");
-        }
-      })
-      .catch(error => alert("Error submitting form."));
-  });
-
-  function closeLightbox() {
-    lightbox.style.display = 'none';
-  }
-
-
 function slideProjects(direction) {
   const track = document.getElementById('sliderTrack');
   const cardWidth = track.querySelector('.project-card').offsetWidth + 24; // 24 for gap
@@ -240,70 +92,149 @@ function slideProjects(direction) {
   });
 }
 
+/*=======================================*/
+/*==== CONTACT FORM THANKYOU LIGHTBOX ===*/    
+/*=======================================*/
+const form = document.getElementById('contactForm');
+const lightbox = document.getElementById('thankYouLightbox');
+
+form.addEventListener('submit', function (e) {
+  e.preventDefault(); // stop default behavior
+
+  const formData = new FormData(form);
+
+  fetch('https://formsubmit.co/ajax/raveenamattu.dev@gmail.com', {
+    method: 'POST',
+    headers: {
+      'Accept': 'application/json'
+    },
+    body: formData
+  })
+    .then(response => {
+      if (response.ok) {
+        lightbox.style.display = 'block';
+        form.reset();
+      } else {
+        alert("Something went wrong. Please try again.");
+      }
+    })
+    .catch(error => alert("Error submitting form."));
+});
+
+function closeLightbox() {
+  lightbox.style.display = 'none';
+}
+
+/*=======================================*/
+/*======= PROJECT LIGHTBOX FUNCTION =====*/
+/*=======================================*/
 const projectScreenshots = {
+  "ps": [
+    { type: "image", src: "assets/screenshots/ps1.png" },
+    { type: "image", src: "assets/screenshots/ps2.png" },
+    { type: "image", src: "assets/screenshots/ps3.png" },
+    { type: "image", src: "assets/screenshots/ps4.png" },
+    { type: "image", src: "assets/screenshots/ps5.png" },
+    { type: "video", src: "assets/screenshots/ps.mov" }
+  ],
   "trios": [
-    "assets/screenshots/trios1.png",
-    "assets/screenshots/trios2.png",
-    "assets/screenshots/trios3.png",
-    "assets/screenshots/trios4.png",
-    "assets/screenshots/trios5.png",
-    "assets/screenshots/trios6.png",
+    { type: "image", src: "assets/screenshots/trios1.png" },
+    { type: "image", src: "assets/screenshots/trios2.png" },
+    { type: "image", src: "assets/screenshots/trios3.png" },
+    { type: "image", src: "assets/screenshots/trios4.png" },
+    { type: "image", src: "assets/screenshots/trios5.png" },
+    { type: "image", src: "assets/screenshots/trios6.png" },
+    { type: "video", src: "assets/screenshots/trios.mov" }
   ],
   "game": [
-    "assets/screenshots/game1.png",
-    "assets/screenshots/game2.png",
-    "assets/screenshots/game3.png",   
-    "assets/screenshots/game4.png",
-    "assets/screenshots/game5.png",
-    "assets/screenshots/game6.png",
-    "assets/screenshots/game7.png",
+    { type: "image", src: "assets/screenshots/game1.png" },
+    { type: "image", src: "assets/screenshots/game2.png" },
+    { type: "image", src: "assets/screenshots/game3.png" },
+    { type: "image", src: "assets/screenshots/game4.png" },
+    { type: "image", src: "assets/screenshots/game5.png" },
+    { type: "image", src: "assets/screenshots/game6.png" },
+    { type: "image", src: "assets/screenshots/game7.png" },
+    { type: "video", src: "assets/screenshots/game.mov" }
   ],
   "market": [
-    "assets/screenshots/market.png",
+    { type: "image", src: "assets/screenshots/market.png" }
   ]
-  // Add more project screenshot arrays here
 };
 
-document.querySelectorAll('.project-link').forEach(link => {
-  link.addEventListener('click', function(e) {
-    const projectKey = this.id;
+const projectMedia = projectScreenshots;
 
-    // Only prevent default and open lightbox if the link has an ID and screenshots
-    if (projectKey && projectScreenshots[projectKey]) {
+document.querySelectorAll('.project-link').forEach(link => {
+  link.addEventListener('click', function (e) {
+    const projectKey = this.id;
+    const media = projectMedia[projectKey];
+
+    if (media && media.length > 0) {
       e.preventDefault();
-      openProjectLightbox(projectScreenshots[projectKey]);
+      openProjectLightbox(media);
     }
-    // Else, let normal links (like external URLs) open naturally
   });
 });
 
-function openProjectLightbox(images) {
-  const lightbox = document.querySelector('#projectLightbox');
-  const preview = document.querySelector('#projectLightboxMain');
-  const thumbnails = document.querySelector('#projectLightboxThumbs');
+function openProjectLightbox(media) {
+  const lightbox = document.getElementById('projectLightbox');
+  const previewContainer = document.getElementById('projectLightboxMain');
+  const thumbnails = document.getElementById('projectLightboxThumbs');
 
-  thumbnails.innerHTML = "";
+  previewContainer.innerHTML = '';
+  thumbnails.innerHTML = '';
 
-  if (images && images.length) {
-    preview.src = images[0];
+  renderMedia(media[0], previewContainer);
 
-    images.forEach((imgSrc, index) => {
-      const thumb = document.createElement('img');
-      thumb.src = imgSrc;
-      if (index === 0) thumb.classList.add('active');
-      thumb.addEventListener('click', () => {
-        preview.src = imgSrc;
-        document.querySelectorAll('#projectLightboxThumbs img').forEach(img => img.classList.remove('active'));
-        thumb.classList.add('active');
-      });
-      thumbnails.appendChild(thumb);
-    });
+  const firstImageSrc = media.find(item => item.type === "image")?.src || 'assets/images/video-icon.png';
 
-    lightbox.classList.add('show');
+media.forEach((item, i) => {
+  const thumb = document.createElement('img');
+
+  if (item.type === "video") {
+  // Use first image src as thumbnail for video items
+    thumb.src = firstImageSrc;
+  } else {
+    thumb.src = item.src;
   }
-}
 
-document.querySelector('.projectLightbox-close').addEventListener('click', () => {
+  if (i === 0) thumb.classList.add('active');
+
+  thumb.addEventListener('click', () => {
+    previewContainer.innerHTML = '';
+    renderMedia(item, previewContainer);
+    document.querySelectorAll('#projectLightboxThumbs img').forEach(img => img.classList.remove('active'));
+    thumb.classList.add('active');
+  });
+
+  thumbnails.appendChild(thumb);
+});
+
+  lightbox.classList.add('show');
+} // openProjectLightbox
+
+function renderMedia(item, container) {
+  if (item.type === "video") {
+    const video = document.createElement("video");
+    video.src = item.src;
+    video.controls = true;
+    video.autoplay = true;
+    video.loop = true;
+    container.appendChild(video);
+  } else if (item.type === "image") {
+    const img = document.createElement("img");
+    img.src = item.src;
+    container.appendChild(img);
+  } else if (item.type === "iframe") {
+    const iframe = document.createElement("iframe");
+    iframe.src = item.src;
+    iframe.width = "100%";
+    iframe.height = "100%"; ;
+    iframe.allow = "fullscreen"; 
+    container.appendChild(iframe);
+  }
+} // renderMedia
+
+  document.querySelector('.projectLightbox-close').addEventListener('click', () => {
   document.querySelector('#projectLightbox').classList.remove('show');
 });
 
