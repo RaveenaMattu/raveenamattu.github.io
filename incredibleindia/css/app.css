@@ -1075,9 +1075,12 @@ header > h1 {
   padding: 50px 20px;
 }
 #pTop > select {
-  width: 60%;
+  width: 70%;
   display: block;
   margin: 20px auto;
+}
+#pTop > h1 {
+  font-size: 1em;
 }
 #pInfo, #pInfoLeft, #pInfoRight {
   padding: 5px 50px;
