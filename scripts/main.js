@@ -266,9 +266,14 @@ const projectScreenshots = {
 
 document.querySelectorAll('.project-link').forEach(link => {
   link.addEventListener('click', function(e) {
-    e.preventDefault();
     const projectKey = this.id;
-    openProjectLightbox(projectScreenshots[projectKey]);
+
+    // Only prevent default and open lightbox if the link has an ID and screenshots
+    if (projectKey && projectScreenshots[projectKey]) {
+      e.preventDefault();
+      openProjectLightbox(projectScreenshots[projectKey]);
+    }
+    // Else, let normal links (like external URLs) open naturally
   });
 });
 
