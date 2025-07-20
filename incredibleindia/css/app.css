@@ -1055,6 +1055,10 @@ header > h1 {
 #topRight > h1 {
   font-size: 2em;
 }
+.thumbs {
+  width: 60px;
+  height: auto;
+}
 .zones > ul > li > a {
   font-size: .8em;
 }
@@ -1086,11 +1090,20 @@ header > h1 {
 }
 #hubLeft, #hubRight {
   padding: 50px;
+  padding-top: 0;
+}
+.formRow {
+  padding-top: 20px;
 }
 .formRow > input, textarea {
   width: 90%;
   font-size: .9em;
   margin: 0 auto;
+}
+#contactForm > button {
+  width: 90%;
+  font-size: 1em;
+  margin-top: 20px;
 }
 footer {
   padding: 10px;
@@ -1101,4 +1114,10 @@ footer {
     text-align: center;
     padding: 10px;
   }
+  .topCenter > a {
+    font-size: 1em;
+    padding: 5px 0;
+  }
+
+
 }
