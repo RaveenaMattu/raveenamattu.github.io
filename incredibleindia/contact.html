@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/app.css">
+  <title>Raveena_HTML_3</title>
+</head>
+<body>
+  <div id="mobileNav" onclick="toggleMenu();">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+  </div>
+  <div id="menu">
+    <a href="destination.html" title="Destinations" onclick="toggleMenu();">Destinations</a>
+    <a href="plan.html" title="Plan your Trip" onclick="toggleMenu();">Plan your Trip</a>
+    <a href="contact.html" title="Get in Touch" onclick="toggleMenu();">Get in Touch</a>
+  </div>  
+  <header id="cHeader">
+    <nav>
+      <div id="links">
+        <a href="index.html"><img src="assets/images/logo.png" alt="logo" width="216" height="40" id="logo"></a>  
+        <a href="destination.html" title="Destinations">Destinations</a>
+        <a href="plan.html" title="Plan your Trip">Plan your Trip</a>
+        <a href="contact.html" title="Get in Touch">Get in Touch</a>
+      </div>
+    </nav>
+    <h1><span id="india">India: </span> A Land of Diversity and Heritage</h1>
+  </header>
+  <main id="cMain">
+      <div id="hubLeft">
+        <h2>Incredible India Content Hub</h2>
+        <p>Welcome to Incredible India Content Hub! This is a digital repository for tourism assets of India. Whether you are a travel enthusiast, media professional, researcher, content creator, influencer, author, film maker, or student, the Incredible India Content Hub offers you a wide range of digital resources, including high-quality images, films, newsletters, and media releases.</p>
+        <h3>How to access Incredible India Content Hub:</h3>
+        <ol>
+          <li>Access the Incredible India Content Hub by following <a href="" title="Link">this link</a>.</li>
+          <li>Click on Register to fill out the required details.</li>
+          <li>A verification email will be sent to your registered email address.</li>
+          <li>Confirm your email address by clicking on the link provided in the verification email</li>
+          <li>Sign in using your registered email address and password to access the Incredible India Content Hub.</li>
+        </ol>
+        <p class="red">Disclaimer:</p>
+        <p class="red">All content available on the Incredible India Content Hub, including images, videos, newsletters, and other digital assets, has been sourced from various organizations, including the Ministry of Tourism, Ministry of Culture, Archaeological Survey of India, and others. All rights to the content remain with the respective organizations. The contributions of all the organizations are duly acknowledged by the Ministry of Tourism.</p>
+        <p class="red">The content available on the Incredible India Content Hub is intended solely to promote tourism in India. Unauthorized use, reproduction, or distribution of these assets for commercial purposes or personal gain is strictly prohibited. Any misuse or infringement may result in legal action by the competent authorities.</p>
+      </div>
+      <div id="hubRight">
+        <form id="contactForm" action="#">        
+          <p>Fill in the form below and we will contact you as soon as possible.</p>
+            <div class="formRow">
+              <input type="text" name="FirstName" size="10" placeholder="First Name" id="firstName" required>
+            </div>
+          <div class="formRow">
+            <input type="text" name="lastName" size="10" placeholder="Last Name" id="lastName" required>
+          </div>
+          <div class="formRow">
+            <input type="email" name="email" size="50" placeholder="Email Address" id="email" required>
+          </div>
+          <div class="formRow">
+            <textarea id="message" name="message" placeholder="Your Query" required rows="5" cols="61"></textarea>
+          </div>
+         
+          <button type="submit"> Request Info </button>
+        </form>
+      </div>
+  </main>
+  <script src="scripts/jquery.js"></script>
+  <script src="scripts/app.js"></script>
+  <footer>
+    <div id="topFooter">
+      <div class="topLeft">
+        <a href="#"><img src="assets/images/logo.png" alt="logo" width="216" height="40" id="logo"></a>
+      </div>
+      <div class="topCenter">
+        <h1>Quick Links</h1>
+        <a href="" title="Attractions">Attractions</a>
+        <a href="" title="Experiences">Experiences</a>
+        <a href="" title="Festivals and Events">Festivals and Events</a>
+        <a href="" title="Hub">Hub</a>
+        <a href="" title="FAQs">FAQs</a>
+      </div>
+      <div class="topRight">
+        <h1>NewsLetter</h1>
+        <p>Sign up for exciting news, learn more about our events and get great travel ideas.</p>
+        <div id="socialIcons">
+          <a href=""><img src="assets/icons/fb.png" alt="Facebook" class="icons"></a>
+          <a href=""><img src="assets/icons/insta.png" alt="Instagram" class="icons"></a>
+          <a href=""><img src="assets/icons/twitter.png" alt="Twitter" class="icons"></a>
+        </div>
+      </div>
+    </div>
+    <div id="bottomFooter">
+      &copy; 2025 Incredible India by Raveena Mattu. All Rights Reserved.
+    </div>
+  </footer>
+</body>
+</html>
