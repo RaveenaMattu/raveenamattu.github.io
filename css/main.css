@@ -656,8 +656,8 @@ footer {
   }
 
   .projectLightbox-thumbnails img {
-    width: 60px;
-    height: 45px;
+    width: 45px;
+    height: auto;
   }
 
   .projectLightbox-close {
