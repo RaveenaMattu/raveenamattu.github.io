@@ -58,7 +58,7 @@ body {
 
 .projectLightbox-thumbnails img {
   width: 80px;
-  height: 60px;
+  height: auto;
   object-fit: cover;
   cursor: pointer;
   border: 2px solid transparent;
@@ -642,7 +642,30 @@ footer {
   background: #ffd36a;
   color: #222831;
 }
+@media (max-width: 600px) {
+  .projectLightbox-content {
+    width: 95%;
+    padding: 10px;
+  }
 
+  .projectLightbox-thumbnails {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    padding-bottom: 5px;
+  }
+
+  .projectLightbox-thumbnails img {
+    width: 60px;
+    height: 45px;
+  }
+
+  .projectLightbox-close {
+    font-size: 24px;
+    top: 6px;
+    right: 10px;
+  }
+}
 
 
 @media (max-width: 950px) {
@@ -746,7 +769,10 @@ footer {
   .slider-btn {
     font-size: 3rem;
   }
-
+  .projectLightbox-content {
+    width: 95%;
+    padding: 30px;
+  }
   #contact {
     grid-template-columns: 1fr;
     gap: 30px;
