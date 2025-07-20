@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/app.css">  
+<title>Raveena_HTML_4</title>
+  
+</head>
+<body>
+  <div id="hamburger" onclick="toggleMenu();">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+  </div>
+  <div id="menu">
+    <a href="#agenda" title="Agenda" onclick="toggleMenu();">Agenda</a>
+    <a href="#policies" title="Policies" onclick="toggleMenu();">Policies</a>
+    <a href="#resources" title="Resources" onclick="toggleMenu();">Resources</a>
+    <a href="#contact" title="Contact" onclick="toggleMenu();">Contact</a>
+  </div>
+  <div id="grid">   
+    <nav>
+      <div>
+        <img src="assets/images/logo.png" alt="logo">
+      </div>
+      <div>
+        <a href="#agenda" title="Agenda">Agenda</a>
+        <a href="#policies" title="Policies">Policies</a>
+        <a href="#resources" title="Resources">Resources</a>
+        <a href="#contact" title="Contact">Contact</a>
+      </div>
+    </nav>
+    <header>
+      <div id="headText">
+        <h1>Classroom Hub</h1>
+        <p>Classroom Hub is a platform that connects students and teachers. It is a place where students can find the best teachers and teachers can find the best students.</p>
+      </div>      
+      <img src="assets/images/group.png" alt="about" id="groupImg">
+    </header>
+    <div id="agenda">
+      <img src="assets/images/cartoon1.png" id="cartoon1">
+      <div id="agendaText">        
+        <h1>Today's Agenda</h1>
+        <p>We're excited to embark on a fun-filled and engaging learning experience. We have planned a mix of interactive activities, creative challenges, and teamwork exercises to make learning enjoyable for everyone. Let's dive into our agenda for the day!</p>
+        <ul>
+          <li>9:00 AM – Welcome & Warm-Up</li>
+          <li>9:30 AM – Story & Discussion </li>
+          <li>11:00 AM – Lunch Break </li>
+          <li> 11:30 AM – Wrap-Up & Reflection </li>
+        </ul>
+        <a href="">View Details  &#8594;</a>
+      </div>
+      <div id="agendaReminder">
+        <h1>Reminders</h1>
+        <p>Stay curious and ready. Tomorrow’s classroom day is packed with<span id="diff"> learning</span>, <span id="diff">creativity</span>, and <span id="diff">fun!</span></p>
+      </div>
+      <img id="crt2" src="assets/images/cartoon3.png">
+    </div>
+    <div id="student">
+      <img src="assets/images/student.png" id="stdImg">
+      <h1>Student of the Week</h1>
+      <p>Amelia Johnson</p>
+    </div>
+    <div id="policies">
+      <div id="policyText">
+        <h1>Classroom Policies</h1>
+        <p>Here are the rules that students have to follow to help keep the classroom harmonious.</p>
+        <img src="assets/images/cartoon2.png" id="polImg">
+      </div>
+      <div id="policyRules">
+        <div><p id="rule1" class="rules">Be Punctual.</p></div>
+        <div><p id="rule2" class="rules">Listen when someone is speaking.</p></div>
+        <div><p id="rule3" class="rules">Raise your hand before speaking. </p></div>
+        <div><p id="rule4" class="rules">Keep the classroom clean and organized.</p></div>
+        <div><p id="rule5" class="rules">Respect your classmates and teacher. </p></div>
+      </div>
+    </div>
+    <div id="resources">
+      <div id="resText">
+        <h1>Class Resources</h1>
+        <p>Access essential study materials like textbooks, worksheets, digital tools, and references to support learning.</p>
+      </div>
+      <!-- <img src="assets/images/desk.png" alt="" id="conImg"> -->
+      <div id="resLink">
+        <div class="lin">
+          <a href = "" id="resHover"><img src="assets/images/textbooks.jpg" class="resImg">
+          <p> Textbooks and Workbooks</p></a>
+        </div>
+        <div class="lin">
+          <a href = "" id="resHover"><img src="assets/images/podcast.jpg" class="resImg">
+          <p>Audiobooks and Podcast</p></a>
+        </div>
+        <div class="lin">
+          <a href = "" id="resHover"><img src="assets/images/flashcards.png" class="resImg">
+          <p>Flashcards</p></a>
+        </div>
+        <div class="lin">
+          <a href = "" id="resHover"><img src="assets/images/Digital.jpg" class="resImg">
+          <p> Video Resources</p></a>
+        </div>
+        <div class="lin">
+          <a href = "" id="resHover"><img src="assets/images/worksheets.jpg" class="resImg">
+          <p> Worksheets and Printables</p></a>
+        </div>
+        <div class="lin">
+          <a href = "" id="resHover"><img src="assets/images/scienceKits.jpg" class="resImg">
+          <p>Hands-on Materials</p></a>
+        </div>
+      </div>      
+    </div>
+    <div id="contact">
+      <div id="conText">
+        <h1>Contact</h1>
+      </div>
+      <div id="conBottom">
+      <form id="contactForm" action="#">        
+        <p>Fill in the form below and we will contact you as soon as possible.</p>
+          <div class="formRow">
+            <input type="text" name="pLegalName" size="10" placeholder="Your Legal Name" id="pLegalName" required>
+          </div>
+        <div class="formRow">
+          <input type="text" name="sLegalName" size="10" placeholder="Student's Legal Name" id="sLegalName" required>
+        </div>
+        <div class="formRow">
+          <input type="email" name="email" size="50" placeholder="Email Address" id="email" required>
+        </div>
+        <div class="formRow">
+          <select>
+            <option value="default">Relationship with the student</option>
+            <option value="mother">Mother</option>
+            <option value="father">Father</option>
+            <option value="Legal">Legal Guardian</option>
+          </select>
+        </div>
+        <div class="formRow">
+          <textarea id="message" name="message" placeholder="Your Query" required rows="5" cols="61"></textarea>
+        </div>
+        <button type="submit"> Request Info </button>
+      </form>
+      <img src="assets/images/contact.png" id="conImg">
+    </div>
+  </div>
+  <footer>
+    <p>&copy; 2025 Classroom Hub by Raveena Mattu. All Rights Reserved.</p>
+    <div id="socialIcons">
+      <a href=""><img src="assets/icons/fb.png" alt="Facebook" class="icons"></a>
+      <a href=""><img src="assets/icons/insta.png" alt="Instagram" class="icons"></a>
+      <a href=""><img src="assets/icons/twitter.png" alt="Twitter" class="icons"></a>
+    </div>
+  </footer>
+<script src="scripts/jquery.js"></script>
+<script src="scripts/app.js"></script>
+</body>
+</html>

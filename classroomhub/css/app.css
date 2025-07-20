@@ -1,0 +1,907 @@
+*{
+  margin:0;
+  padding:0;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+body{
+  width: 100%;
+  background: #636467;
+  font-family: "Montserrat", sans-serif;
+}
+
+#hamburger {
+  position: fixed;
+  z-index: 3;
+  top: 25px;
+  right: 13px;
+  width: 90px;
+  height: 80px;
+  padding: 5px 10px;
+  visibility: hidden;
+}
+  .bar {
+    width: 50px;
+    height: 5px;
+    margin: 4px 0;
+    background: #5b5555;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+#menu {
+  position: fixed;
+  z-index: 1;
+  background: #c8f471d8;
+  width: 260px;
+  height: 100vh;
+  top: 0;
+  right: -280px;
+  padding-top: 110px;
+  padding-left: 23px;
+}
+  #menu > a {
+    display: block;
+    text-decoration: none;
+    color: #5b5555;
+    margin: 23px 0;
+    font-size: 1.5em;
+    font-weight: 500;
+    font-family: "Montserrat", sans-serif;
+  }
+  #menu > a:hover {
+    color: #6256CA;
+  }
+  #grid {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(12, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    grid-template-areas: 
+        "nav nav nav nav nav nav nav nav nav nav nav nav"
+        "hdr hdr hdr hdr hdr hdr hdr hdr hdr hdr hdr hdr"
+        "abt abt abt abt abt abt abt abt abt abt abt abt"
+        "agd agd agd agd agd agd agd agd agd agd agd agd"
+        "std std std std pol pol pol pol pol pol pol pol"
+        "res res res res res res res res res res res res"
+        "con con con con con con con con con con con con"
+        "ftr ftr ftr ftr ftr ftr ftr ftr ftr ftr ftr ftr";
+  }
+  nav {
+    display: grid;
+    width: 100%;
+    grid-area: nav;
+    grid-template-columns: 40% 60%;  /* Define three columns*/ 
+    grid-template-areas: "log lin";  /* Name the areas for easy placement */
+    background: #c8f471;
+    color: #fff;
+    position: fixed;
+    top:0;
+    padding: 0 100px;
+    align-items: center;
+  }
+  
+  nav > div:nth-child(1) {
+    grid-area: log;
+  }
+    nav > div > img {
+      width: 250px;
+      height: auto;
+    }
+    nav > div:nth-child(2) {
+      grid-area: lin;  
+      display: grid;
+      grid-auto-flow: column;
+      gap: 50px;
+      justify-content: right; 
+    }
+    nav > div > a {
+      color: #5b5555;
+      text-decoration: none;
+      font-size: 1.2em;
+      font-weight: 400;
+    }
+  
+    nav > div > a:hover {
+      color: #6256CA;
+    }
+
+  header {
+    display: grid;
+    width: 100%;
+    grid-area: hdr;
+    grid-template-columns: 70% 30%; 
+    grid-template-areas: "txt img"; 
+    margin-top: -10px; 
+    background: #2b4776;
+    padding: 100px;
+    align-items: center; 
+    overflow-x: hidden;   
+  }
+   #headText {
+    grid-area: txt;
+    text-align: justify;
+    padding-right: 100px;
+    padding-left:0;
+
+  }
+    #headText > h1 {
+      font-size: 5em;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 700;
+      color: #ffc546;
+    }
+    #headText > p {
+      padding-top: 20px;
+      font-size: 1.5em;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 300;
+      color: #fff;
+      padding-bottom: 100px;
+    }
+    header > img {
+      grid-area: img;  
+      display: grid;
+      height: auto;
+      padding-bottom: 50px;
+      padding-left: 100px;
+      /* background: #636467; */
+      
+    }
+    #groupImg {
+      width: 500px;
+      justify-self: right;
+      align-self: center;
+    }
+    #agenda {
+      grid-area: agd;
+      width: 100%;
+      background: #fef3e2;
+      grid-template-columns: 20% 50% 30%;
+      grid-template-rows: minmax(100px, auto);
+      grid-template-areas: "im1 txt im2";
+      min-height: 500px;
+      margin-top: -200px; 
+      display: grid;
+      padding:100px;
+      justify-content: center;
+      align-items: center;
+    }
+    #agenda > div:nth-child(1) {
+      grid-area: im1;
+      width: 100%;
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: minmax(100px, auto);
+      display: grid;
+      justify-content: center;
+      align-items: center;
+    }
+      #cartoon1 {
+        width: 100%;
+        height: auto;
+      }
+    #agenda > div:nth-child(2) {
+      grid-area: txt;
+      width: 100%;
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: minmax(100px, auto);
+      display: grid;
+      padding: 0 100px;
+      justify-content: center;
+      align-items: center;
+    }
+      #agenda > #agendaText > h1 {
+        font-size: 2.5em;
+        padding-left: 20px;
+        text-shadow: 2px 2px 5px #fdb6bc;
+      }
+      #agenda > #agendaText > p {
+        padding-top: 20px;
+        font-size: 1.2em;
+        text-align: justify;
+        padding-bottom: 30px;
+      }
+      #agenda > div > ul {
+        padding-left: 50px;
+      }
+      #agenda > div > ul > li {
+        padding: 5px 0;
+        font-size: 1.2em;
+      }
+      #agenda > div > a {
+        margin-top: 20px;
+        color: #c92463;
+        justify-self: end;
+      }
+    #agenda > div:nth-child(3) {
+      grid-area: im2;
+      width: 100%;
+      background-color: #fdb6bc;
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: minmax(100px, auto);
+      height: auto;
+      padding: 100px;
+      border-radius: 50%;
+      display: grid;
+      align-items: center;
+      justify-content: center;
+    }
+    #crt2 {
+      display: grid;
+      grid-area: im2;
+      align-self:last baseline;
+      width: 140px;
+      height: auto;
+    }
+      #agenda > #agendaReminder > h1 {
+        align-self: start;
+        justify-self: center;
+      }
+      #agenda > #agendaReminder > p {
+        justify-self: left;
+        align-self: start;
+        font-size: 1.2em;
+        margin-top: -50px;
+      }   
+      #diff {
+        font-size: 1.5em;
+        font-weight: 600;
+        color: #2b4776;
+      }
+  #student {
+    display: grid;
+    grid-area: std;
+    width: 100%;
+    grid-template-columns: repeat(1, auto);
+    grid-template-rows: minmax(100px, auto);
+    background: #f8ed8d;
+    justify-content: center;
+    padding: 50px;
+    /* background: #707; */
+  }
+    #student > h1 {
+      text-align: center;
+      /* background: #94c8e8; */
+      align-self: center;
+      padding-left: 20px;
+      padding-top: 15px;
+    }
+    #student > p {
+      text-align: center;
+      font-size: 1.2em;
+      font-weight: 500;
+      /* background: #94c8e8; */
+      align-self: start;
+
+    }
+    #stdImg {
+      width: 80%;
+      height: auto;
+      align-self: end;
+      padding-left: 50px;
+    }
+  #policies {
+    display: grid;
+    grid-area: pol;
+    width: 100%;
+    padding-top: 100px;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: minmax(100px, auto);
+    grid-template-areas: "ptx prl";
+    background: #f8ed8d;
+    /* background: #700; */ 
+
+  }
+    #policyText {
+      display: grid;
+      grid-area: ptx;
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: minmax(100px auto);
+      /* background: #777; */
+      align-content: end;
+      padding: 50px;
+      padding-bottom: 0;
+    }
+      #policyText > h1 {
+        padding-top: 20px;
+        /* background: #077; */
+        font-size: 2.5em;
+        padding-left: 20px;
+        justify-self: left;
+        align-self: center;
+        text-shadow: 2px 2px 5px #4aa35b;
+      }
+      #policyText > p {
+        /* background: #077; */
+        text-align: justify;
+        font-size: 1.2em;
+        padding: 10px 0;
+        padding-top: 40px;
+      }
+      #polImg {
+        width: 70%;
+        height: auto;
+        justify-self: center; 
+        align-self: end;
+        margin-top: 30px;
+      }
+    #policyRules {
+      display: grid;
+      grid-area: prl;
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: minmax(100px auto);
+      padding: 50px;
+      margin-top: -80px;
+      /*background: #cccccc;*/
+    }
+      .rules {
+        /*background: #838282;*/
+        min-height: 70px;
+        text-align: center;
+        padding: 25px;
+        margin-top: 20px;
+        border-radius: 4px;
+        font-weight: 600;
+      }
+      #rule1 {
+        background: #f09b53;
+      }
+      #rule2 {
+        background: #4aa35b;
+      }
+      #rule3 {
+        background: #f6c85e;
+      }
+      #rule4 {
+        background: #94c8e8;
+      }
+      #rule5 {
+        background: #fdb6bc;
+      }
+  #resources {
+    display: grid;
+    grid-area: res;
+    width: 100%;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: minmax(100px auto);
+    grid-template-areas: "rtx"
+                         "rln";
+    background: #b0e0fd;
+    padding: 100px 0;
+    /* background: #707; */
+  } 
+
+    #resText {    
+      display: grid;
+      grid-area: rtx;
+      align-items: end;
+      justify-content: center; 
+    }
+      #resText > h1 {
+        font-size: 2.5em;
+        padding-top: 15px;
+        padding-left: 20px;
+        text-shadow: 2px 2px 5px #f6c85e;
+      }
+      #resText > p {
+        padding-top: 25px;
+        font-size: 1.2em;
+        font-weight: 500;
+      } 
+    #resLink {
+      display: grid;
+      grid-area: rln;
+      /* background: #94c8e8; */
+      grid-template-columns: repeat(6, auto);
+      grid-template-rows: minmax(100px, auto);
+      gap: 80px;
+      margin-top: 80px;
+      justify-content: center;
+    }  
+      .lin {
+        /* background: #f6c85e; */
+        text-align: center; 
+      } 
+      .lin > a  {
+        text-decoration: none;
+        color: #000; 
+      } 
+      .lin > a > p {
+        padding-top: 15px;
+        font-size: 1.2em;
+        font-weight: 700; 
+        width: 200px; 
+      }
+      .resImg {
+        width: 200px;
+        height: auto;
+      }
+      #resHover:hover {
+        opacity: .5;
+      }
+      #conImg {
+        width: 500px;
+        height: auto;
+      }
+  #contact {
+    display: grid;
+    grid-area: con;
+    width: 100%;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: minmax(100px, auto);
+    padding:100px;
+    background: #f6c85e;
+    align-items: center;
+    justify-content: center;
+  }
+  #conBottom {
+    padding-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: minmax(100px, auto);
+    /* background: #636467; */
+  }
+    #conText > h1 {
+      font-size: 2.5em;
+      padding-top: 15px;
+      padding-left: 20px;
+      text-shadow: 2px 2px 5px #94c8e8;
+    }
+    #conImg {
+      width: 600px;
+      height: auto;
+      justify-self: center;
+      /* background: #292a2b; */
+    }
+    #contactForm {
+      padding: 50px 20px;
+      background: #d0447a;
+      background-size: cover;
+      width: 80%;
+      text-align: center;
+      justify-self: center;
+    }
+  
+      #contactForm > p {
+        padding: 20px 50px;
+        font-size: 1em;
+        text-align: center;
+        color: #fff;
+      }
+      .formRow {
+        width: 100%;
+        text-align: center;
+        padding-top: 20px;
+        overflow: hidden;      
+      }
+        .formRow > input, textarea, select, option {
+          border: 1px solid #d3d2d2;
+          color: d3d2d2;
+          background: #fff;
+          width: 80%;
+          height: 40px;
+          padding-left: 10px;
+          font-size: 1em;
+          border-radius: 4px;
+        }
+        .formRow > textarea {
+          height: 100px;
+          font-family: 'Arial';
+          padding: 5px 10px;
+        }
+      input[type='email']{
+        border: 1px solid #d3d2d2;
+      }
+      input[type='text']:hover {
+        border: 1px solid #c1eafc;
+      }
+      input[type='email']:hover {
+        border: 1px solid #c1eafc;
+      }
+      textarea:hover {
+        border: 1px solid #c1eafc;
+      }
+      select:hover {
+        border: 1px solid #c1eafc;
+      }
+      #contactForm > button {
+        font-family: "Montserrat", sans-serif;
+        height: 60px;
+        width: 50%;
+        border: none;
+        font-size: 1.2em;
+        background: #4aa35b;
+        color: #fff;
+        margin-top: 50px;
+        font-weight: 700;
+      }
+      #contactForm > button:hover {
+        background: #fff;
+        color: #4aa35b;
+        border: 2px solid #4aa35b;
+      }
+  footer {
+    display: grid;
+    grid-area: ftr;
+    width: 100%;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: minmax(50px, 1fr);
+    background: #2b4776;
+    justify-items: center;
+    align-self: center;
+  }
+    footer > p {
+      color: #fff;
+      font-size: 1.2em;
+      padding: 25px 50px;
+      padding-top: 40px;
+      text-align: center;
+    }
+    #socialIcons {
+      padding-bottom: 10px;
+    }
+    .icons {
+      width: 40px;
+      height: 40px;
+      margin: 0 5px;
+    }
+  @media (max-width: 1500px) {
+    #resLink {
+      grid-template-columns: repeat(3, auto);
+    }
+  }
+  @media (max-width: 1285px) {
+    #hamburger { 
+      visibility: visible;
+    }
+    nav {
+      display: grid;
+      width: 100%;
+      grid-template-areas: log log lin;
+    }
+    nav > div:nth-child(1) {
+      grid-area: log;
+      justify-self: start;
+      align-self: center;
+    }
+    nav > div:nth-child(2) {
+      visibility: hidden;
+    }
+    #groupImg {
+      width: 400px;      
+    }
+    #agenda {
+      grid-template-columns:60% 40%;
+      grid-template-rows: minmax(100px, auto);
+      grid-template-areas: "txt im2"; 
+    }
+      #agendaReminder {
+        justify-self: unset;
+      }
+    #student{
+      justify-items: center;
+      padding: 50px 0;
+    }
+    #cartoon1 {
+      width: 0;
+      height: auto;
+    }
+    #policyText {
+      /* background: #777; */
+      align-content: center;
+    }
+    #resText {
+      padding: 0 100px; 
+    }
+    #resLink {
+      padding: 0 100px;
+    }     
+    #contact {
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: minmax(100px auto);
+    }
+      #conBottom {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: minmax(100px auto);
+      }
+      #contactForm {
+        width: 90%;
+      }
+  }
+  @media (max-width: 950px) {
+    #grid {
+      display: grid;
+      width: 100%;
+      grid-template-columns: repeat(8, 1fr);
+      grid-auto-rows: minmax(100px, auto);
+      grid-template-areas: 
+          "nav nav nav nav nav nav nav nav"
+          "hdr hdr hdr hdr hdr hdr hdr hdr"
+          "abt abt abt abt abt abt abt abt"
+          "agd agd agd agd agd agd agd agd"
+          "std std std std std std std std"
+          "pol pol pol pol pol pol pol pol"
+          "res res res res res res res res"
+          "con con con con con con con con"
+          "ftr ftr ftr ftr ftr ftr ftr ftr";
+    }
+
+    nav {
+      padding: 0 50px;
+    }
+    header {
+      display: grid;
+      width: 100%;
+      grid-area: hdr;
+      grid-template-columns: repeat(1, 1fr); 
+      grid-template-areas: "txt"
+       "img"; 
+    }
+    #headText {
+      align-items: center;
+      justify-content: center;
+      padding-right: 0;
+    }
+    #headText > h1 {
+      justify-self: center;
+      text-align: center;
+    }
+    #headText > p {
+      justify-self: center;
+      text-align: justify;
+      margin: 0 auto;
+    }
+    #groupImg {
+      width: 0;      
+    }
+    #agenda {
+      grid-template-columns:repeat(1, 1fr);
+      grid-template-rows: minmax(100px, auto);
+      grid-template-areas: "txt"
+                           "im2"; 
+      padding: 50px;
+    }
+    #agenda > div:nth-child(2) {
+      padding: 0 50px;
+    }
+    #agenda > #agendaText > h1 {
+      padding-top: 15px;
+      padding-left: 20px;
+      text-shadow: 2px 2px 5px #fdb6bc;
+    }
+    #agenda > #agendaText > p {
+      font-size: 1em;
+      text-align: justify;
+      padding: 20px 0;
+    }
+    #agenda > #agendaText > ul > li {
+      font-size: 1em;
+    }
+    #agenda > #agendaReminder > p {
+      justify-self: left;
+      align-self: start;
+      font-size: 1em;
+      margin-top: -50px;
+    }
+    #agenda > div:nth-child(3) {
+      margin-top: 50px;
+      width: 60%;
+      align-self: end;
+      justify-self: center;
+    }
+      #diff {
+        font-size: 1.2em;
+        font-weight: 600;
+        color: #2b4776;
+      }
+      #crt2 {
+        margin-top: 50px;
+        align-self: center;
+        justify-self: left;
+        width: 30%;
+      }
+    #resText {
+      padding: 50px 100px; 
+      padding-bottom: 25px;
+    }
+    #resLink {
+      grid-template-columns: repeat(2, auto);
+      padding: 0 50px;
+      gap: 60px;
+    }
+    #contact {
+      align-items: center;
+      justify-content: center;
+      padding: 50px;
+    }
+    #conText > h1 {
+      justify-self: center;
+    }
+  }
+  @media (max-width: 600px) {
+    #grid {
+      display: grid;
+      width: 100%;
+      grid-template-columns: repeat(4, 1fr);
+      grid-auto-rows: minmax(100px, auto);
+      grid-template-areas: 
+          "nav nav nav nav"
+          "hdr hdr hdr hdr"
+          "abt abt abt abt"
+          "agd agd agd agd"
+          "std std std std"
+          "pol pol pol pol"
+          "res res res res"
+          "con con con con"
+          "ftr ftr ftr ftr";
+    }
+    nav {
+      padding: 10px 20px;
+    }
+    nav > div > img {
+      width: 200px;
+      height: auto;
+    }
+    header {
+      padding: 50px;
+    }
+    #headText > h1 {
+      font-size: 2.5em;
+    }
+    #headText > p {
+      font-size: 1em;
+    }
+    #groupImg {
+      width: 0;      
+    }
+    #agenda {
+      padding: 0;
+    }
+    #agenda > div:nth-child(2) {
+      padding: 0 20px;
+    }
+    #agenda > #agendaText > h1 {
+      font-size: 1.5em;
+    }
+    #agenda > #agendaText > p {
+      font-size: 1em;
+    }
+    #agenda > div:nth-child(3) {
+      width: 60%;
+      height: 250px;
+      margin: 40px auto;
+      padding: 0 25px;
+    }
+    #agenda > #agendaReminder > h1 {
+        align-self: center;
+        justify-self: center;
+        font-size: 1.5em;
+      }
+    #agenda > #agendaReminder > p {
+      justify-self: center;
+      align-self: start;
+      text-align: center;
+      font-size: 1em;
+    }   
+    #diff {
+      font-size: 1em;
+      font-weight: 600;
+      color: #2b4776;
+    }
+    #crt2 {
+      width: 25%;
+      margin-top: 20px;
+    }
+    #student {
+      padding: 20px;
+    }
+    #policies {
+    padding-top: 50px;
+    grid-template-areas: "ptx" 
+                          "prl";
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: minmax(100px, auto);
+    }
+    #policyText {
+      padding: 20px;
+      padding-bottom: 0;
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: minmax(100px, auto);
+    }
+    #policyText > h1 {
+      font-size: 2em;
+    }
+    #policyText > p {
+      font-size: 1em;
+    }
+    #polImg {
+      width: 100%;
+      height: auto;
+    }
+    #policyRules {
+      margin-top: 20px;
+    }
+    #resources {
+      padding: 30px 0;
+      grid-template-areas: "rtx"
+                           "rln";
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: minmax(100px, auto);
+    }
+    #resText {
+      padding: 30px 20px;
+      padding-bottom: 10px;
+    }
+     #resText > h1 {
+      padding-left: 0;
+      }
+    #resLink {
+      grid-template-columns: repeat(2, auto);
+      padding: 0 20px;
+      gap: 40px;
+    }
+    .resImg {
+      width: 100%;
+      height: auto;
+    }
+    .lin > a > p {
+      font-size: 1em;
+      font-weight: 600; 
+      width: 150px; 
+    }
+    #contact {
+      padding: 20px;      
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: minmax(100px, auto);
+    }
+    #conText > h1 {
+      font-size: 2.5em;
+      justify-self: center;
+      padding: 0;
+    }
+    #conImg {
+      width: 100%;
+      height: auto;
+      justify-self: center;
+    }
+    #conBottom {
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: minmax(100px, auto);
+      padding: 0;
+    }
+    #contactForm {
+      width: 90%;
+      padding: 0;
+    }
+    #contactForm > p {
+      font-size: 0.9em;
+      padding: 15px 5px;
+    } 
+    .formRow > input, textarea, select, option {
+      width: 90%;
+      height: 35px;
+      font-size: 0.9em;
+    }
+    #contactForm > button {
+      width: 90%;
+      height: 50px;
+      font-size: 1em;
+      margin: 20px auto;
+      font-weight: 500;
+    }
+    footer {
+      padding: 20px;
+    }
+    footer > p {
+      font-size: .9em;
+      padding: 0; 
+    } 
+    #socialIcons {
+      padding: 0;
+    } 
+    .icons {
+      width: 30px;
+      height: auto;
+      margin: 0 3px;
+    }
+  }
