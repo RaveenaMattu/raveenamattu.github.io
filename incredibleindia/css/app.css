@@ -13,14 +13,14 @@ body{
   height: 70px;
   position: fixed;
   z-index: 7;
-  top: 15px;
-  right: 29px;
+  top: 25px;
+  right: 20px;
   cursor: pointer;
   visibility: hidden;
 }
   .bar {
     width: 50px;
-    height: 8px;
+    height: 5px;
     margin: 4px auto;
     background: #fff;
     border-radius: 4px;
@@ -1002,4 +1002,52 @@ footer {
       height: 30px;
       margin: 0 5px;
     }
+}
+@media (max-width: 600px) {
+
+ #links > a {
+  
+  margin: 0 10px;
+}
+header > h1 {
+  font-size: 3em;
+  padding-top: 250px;
+}
+#asideRight{
+    padding: 0 40px;
+  }
+.mainRow {
+  padding: 0 20px;
+}
+.cities {
+  padding-bottom: 10px;
+}
+#pTop {
+  padding: 50px 20px;
+}
+#pTop > select {
+  width: 60%;
+  display: block;
+  margin: 20px auto;
+}
+#pInfo, #pInfoLeft, #pInfoRight {
+  padding: 5px 50px;
+}
+#pBottom {
+  padding: 10px 50px;
+}
+#pBottom > h1 {
+  font-size: 3em;
+}
+#hubLeft, #hubRight {
+  padding: 50px;
+}
+.formRow > input, textarea {
+  width: 90%;
+  font-size: .9em;
+  margin: 0 auto;
+}
+footer {
+  padding: 10px;
+}
 }
