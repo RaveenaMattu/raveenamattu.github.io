@@ -148,12 +148,12 @@ const projectScreenshots = {
   ],
   "game": [
     { type: "image", src: "assets/screenshots/game1.jpg" },
-    { type: "image", src: "assets/screenshots/game2.png" },
-    { type: "image", src: "assets/screenshots/game3.png" },
-    { type: "image", src: "assets/screenshots/game4.png" },
-    { type: "image", src: "assets/screenshots/game5.png" },
-    { type: "image", src: "assets/screenshots/game6.png" },
-    { type: "image", src: "assets/screenshots/game7.png" },
+    { type: "image", src: "assets/screenshots/game2.jpg" },
+    { type: "image", src: "assets/screenshots/game3.jpg" },
+    { type: "image", src: "assets/screenshots/game4.jpg" },
+    { type: "image", src: "assets/screenshots/game5.jpg" },
+    { type: "image", src: "assets/screenshots/game6.jpg" },
+    { type: "image", src: "assets/screenshots/game7.jpg" },
     { type: "video", src: "assets/screenshots/game.mov" }
   ],
   "market": [
