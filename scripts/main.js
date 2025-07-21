@@ -138,12 +138,12 @@ const projectScreenshots = {
     { type: "video", src: "assets/screenshots/ps.mov" }
   ],
   "trios": [
-    { type: "image", src: "assets/screenshots/trios1.png" },
-    { type: "image", src: "assets/screenshots/trios2.png" },
-    { type: "image", src: "assets/screenshots/trios3.png" },
-    { type: "image", src: "assets/screenshots/trios4.png" },
-    { type: "image", src: "assets/screenshots/trios5.png" },
-    { type: "image", src: "assets/screenshots/trios6.png" },
+    { type: "image", src: "assets/screenshots/trios1.jpg" },
+    { type: "image", src: "assets/screenshots/trios2.jpg" },
+    { type: "image", src: "assets/screenshots/trios3.jpg" },
+    { type: "image", src: "assets/screenshots/trios4.jpg" },
+    { type: "image", src: "assets/screenshots/trios5.jpg" },
+    { type: "image", src: "assets/screenshots/trios6.jpg" },
     { type: "video", src: "assets/screenshots/trios.mov" }
   ],
   "game": [
