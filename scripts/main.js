@@ -147,14 +147,14 @@ const projectScreenshots = {
     { type: "video", src: "assets/screenshots/trios.mov" }
   ],
   "game": [
-    { type: "image", src: "assets/screenshots/game1.png" },
+    { type: "image", src: "assets/screenshots/game1.jpg" },
     { type: "image", src: "assets/screenshots/game2.png" },
     { type: "image", src: "assets/screenshots/game3.png" },
     { type: "image", src: "assets/screenshots/game4.png" },
     { type: "image", src: "assets/screenshots/game5.png" },
     { type: "image", src: "assets/screenshots/game6.png" },
     { type: "image", src: "assets/screenshots/game7.png" },
-    { type: "video", src: "https://drive.google.com/file/d/1skD27g8tlRb6vyjKlu6Cbc1c0yEZA1N8/view?usp=sharing" }
+    { type: "video", src: "assets/screenshots/game.mov" }
   ],
   "market": [
     { type: "image", src: "assets/screenshots/market.png" }
