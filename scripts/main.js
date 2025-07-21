@@ -154,7 +154,7 @@ const projectScreenshots = {
     { type: "image", src: "assets/screenshots/game5.png" },
     { type: "image", src: "assets/screenshots/game6.png" },
     { type: "image", src: "assets/screenshots/game7.png" },
-    { type: "video", src: "assets/screenshots/game.mov" }
+    { type: "video", src: "https://drive.google.com/file/d/1skD27g8tlRb6vyjKlu6Cbc1c0yEZA1N8/view?usp=sharing" }
   ],
   "market": [
     { type: "image", src: "assets/screenshots/market.png" }
