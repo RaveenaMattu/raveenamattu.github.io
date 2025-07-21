@@ -76,7 +76,7 @@ body {
 
 .projectLightbox-close {
   position: absolute;
-  top: 10px;
+  top: 20px;
   right: 25px;
   font-size: 3rem;
   color: #ffd36a;
