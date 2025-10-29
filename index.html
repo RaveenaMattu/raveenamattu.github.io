@@ -1,275 +1,405 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Raveena Mattu</title>
-  <link rel="stylesheet" href="css/main.css">
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="scripts/main.js" defer></script>
-</head>
-<body>
-  <div id="projectLightbox" class="projectLightbox">
-    <div class="projectLightbox-content">
-      <div class="projectLightbox-thumbnails" id="projectLightboxThumbs">
-        <!-- Thumbnails go here -->
-      </div>
-      <span class="projectLightbox-close">&times;</span>
-      <div class="projectLightbox-preview" id="projectLightboxMain">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Raveena Mattu</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="scripts/main.js" defer></script>
+  </head>
+  <body>
+    <div id="projectLightbox" class="projectLightbox">
+      <div class="projectLightbox-content">
+        <div class="projectLightbox-thumbnails" id="projectLightboxThumbs">
+          <!-- Thumbnails go here -->
+        </div>
+        <span class="projectLightbox-close">&times;</span>
+        <div class="projectLightbox-preview" id="projectLightboxMain"></div>
       </div>
     </div>
-  </div>
 
-  <div id="hamburger" onclick="toggleMenu();">
-    <div class="bar"></div>
-    <div class="bar"></div>
-    <div class="bar"></div>
-  </div>
-  <div id="menu">
-    <a href="#about" title="ABOUT" onclick="toggleMenu();">About</a>
-    <a href="#skills" title="SKILLS" onclick="toggleMenu();">Skills</a>
-    <a href="#projects" title="PROJECTS" onclick="toggleMenu();">Projects</a>
-    <a href="#contact" title="CONTACT" onclick="toggleMenu();">Contact</a>
-  </div>
-  <main>
-    <nav>
-      <div class="logo">
-        <img src="assets/images/logo.png" alt="Logo">
-      </div>
-      <div class="nav-links">
-        <a href="#about">ABOUT</a>
-        <a href="#skills">SKILLS</a>
-        <a href="#projects">PROJECTS</a>
-        <a href="#contact">CONTACT</a>
-      </div>
-    </nav>
-    <header>
-      <div class="header-content">
-        <p>Hello, Myself..</p>
-        <h1><span id="fName">RAVEENA</span><br>
-        <span id="lName">MATTU</span></h1>    
-      </div>
-      <div class="rotate-img">
-        <div class="rotating-circle"></div>
-        <div class="static-text" id="techText"></div>
-      </div>  
-    </header>
-    <section id="about">
-      <img src="assets/images/ID2.png" alt="Profile Picture">
-      <div class="about-text">
-        <h2>ABOUT ME</h2>
-        <p>Hello! I’m Raveena, an aspiring UX/UI designer and web developer with a passion for creating engaging, user-centered digital experiences. My journey into design and development started with a fascination for how intuitive interfaces can elevate user satisfaction and make complex tasks feel effortless.
-        With a growing skill set in tools like Adobe Illustrator, Adobe Photoshop, Adobe XD, HTML, CSS, and JavaScript, I enjoy translating user needs into seamless, visually compelling designs. I’m always looking for ways to improve my skills and stay current with industry trends, whether through online courses, hands-on projects, or collaborating with others in the field.</p>
-        <button onclick="window.location.href='assets/documents/RaveenaMattu_Resume.pdf';" class="click">View Resume</button>
-      </div>  
-    </section>
-    <section id="quote">
-      <div id="quote-text">
-        <p> Life is like <span id="gray">GITHUB…</span>nothing will change until you <span id="gray">COMMIT</span>. </p>
-        <p id="sign">~ a life lesson.</p>
-      </div>     
-    </section>
-    <section id="skills">
-      <h2>TECHNOLOGIES / SOFT SKILLS </h2>
-      <div class="skills-grid">
-        <div class="skill-item"><img src="assets/images/languages/html.png" alt="HTML"></div>
-        <div class="skill-item"><img src="assets/images/languages/css.png" alt="CSS"></div>
-        <div class="skill-item"><img src="assets/images/languages/js.png" alt="JavaScript"></div>
-        <div class="skill-item"><img src="assets/images/languages/xd.png" alt="Adobe XD"></div>
-        <div class="skill-item"><img src="assets/images/languages/ps.png" alt="Adobe Phototoshop"></div>
-        <div class="skill-item"><img src="assets/images/languages/java.png" alt="Java"></div>
-        <div class="skill-item"><img src="assets/images/languages/php.png" alt="PHP"></div>
-        <div class="skill-item"><img src="assets/images/languages/react.png" alt="React"></div>
-        <div class="skill-item"><img src="assets/images/languages/aI.png" alt="Illustrator"></div>
-        <div class="skill-item"><img src="assets/images/languages/swift.png" alt="Swift"></div>
-        <div class="skill-item"><img src="assets/images/languages/mysql.png" alt="MySQL"></div>
-        <div class="skill-item"><img src="assets/images/languages/linux.png" alt="Linux"></div>
-        <div class="skill-item"><img src="assets/images/languages/wordpress.png" alt="Wordpress"></div>
-        <div class="skill-item"><img src="assets/images/languages/github.png" alt="Github"></div>
-        <div class="skill-item"><img src="assets/images/languages/vscode.png" alt="VS Code"></div>
-        <div class="skill-item"><img src="assets/images/languages/angular.png" alt="Angular"></div>
-      </div>
-    </section>
-    <section id="projects">
-      <h2>PROJECTS</h2>
-
-      <div class="slider-container">
-      <button class="slider-btn prev" onclick="slideProjects(-1)">‹</button>
-      <div class="slider-wrapper">
-        <div class="slider-track" id="sliderTrack">
-          <!-- 1st: image left, text right -->
-          <div class="project-card">
-            <div class="project-img">
-              <img src="assets/images/design3.png" alt="Portfolio Site 1">
-            </div>
-            <div class="project-info">
-              <h3>PRISM Electronics - Design Showcase</h3>
-              <p><span class="tech-used">XD</span></p>
-              <a href="https://xd.adobe.com/view/49fda550-d9ae-4bc6-a81a-7e2a18056b05-1cae/" target="_blank" class="project-link">Preview</a>
-            </div>
+    <div id="hamburger" onclick="toggleMenu();">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+    <div id="menu">
+      <a href="#about" title="ABOUT" onclick="toggleMenu();">About</a>
+      <a href="#skills" title="SKILLS" onclick="toggleMenu();">Skills</a>
+      <a href="#projects" title="PROJECTS" onclick="toggleMenu();">Projects</a>
+      <a href="#contact" title="CONTACT" onclick="toggleMenu();">Contact</a>
+    </div>
+    <main>
+      <nav>
+        <div class="logo">
+          <img src="assets/images/logo.png" alt="Logo" />
+        </div>
+        <div class="nav-links">
+          <a href="#about">ABOUT</a>
+          <a href="#skills">SKILLS</a>
+          <a href="#projects">PROJECTS</a>
+          <a href="#contact">CONTACT</a>
+        </div>
+      </nav>
+      <header>
+        <div class="header-content">
+          <p>Hello, Myself..</p>
+          <h1>
+            <span id="fName">RAVEENA</span><br />
+            <span id="lName">MATTU</span>
+          </h1>
+        </div>
+        <div class="rotate-img">
+          <div class="rotating-circle"></div>
+          <div class="static-text" id="techText"></div>
+        </div>
+      </header>
+      <section id="about">
+        <img src="assets/images/ID2.png" alt="Profile Picture" />
+        <div class="about-text">
+          <h2>ABOUT ME</h2>
+          <p>
+            Hello! I’m Raveena, an aspiring UX/UI designer and web developer
+            with a passion for creating engaging, user-centered digital
+            experiences. My journey into design and development started with a
+            fascination for how intuitive interfaces can elevate user
+            satisfaction and make complex tasks feel effortless. With a growing
+            skill set in tools like Adobe Illustrator, Adobe Photoshop, Adobe
+            XD, HTML, CSS, and JavaScript, I enjoy translating user needs into
+            seamless, visually compelling designs. I’m always looking for ways
+            to improve my skills and stay current with industry trends, whether
+            through online courses, hands-on projects, or collaborating with
+            others in the field.
+          </p>
+          <button
+            onclick="window.location.href='assets/documents/RaveenaMattu_Resume.pdf';"
+            class="click"
+          >
+            View Resume
+          </button>
+        </div>
+      </section>
+      <section id="quote">
+        <div id="quote-text">
+          <p>
+            Life is like <span id="gray">GITHUB…</span>nothing will change until
+            you <span id="gray">COMMIT</span>.
+          </p>
+          <p id="sign">~ a life lesson.</p>
+        </div>
+      </section>
+      <section id="skills">
+        <h2>TECHNOLOGIES / SOFT SKILLS</h2>
+        <div class="skills-grid">
+          <div class="skill-item">
+            <img src="assets/images/languages/html.png" alt="HTML" />
           </div>
-
-          <!-- 2nd: image right, text left -->
-          <div class="project-card">
-            <div class="project-img">
-              <img src="assets/images/site2.png" alt="E-commerce Site">
-            </div>
-            <div class="project-info">
-              <h3>Incredible India</h3>
-              <p>
-                <span class="tech-used">HTML</span>
-                <span class="tech-used">CSS</span>
-              </p>
-              <a href="https://raveenamattu.github.io/incredibleindia/" target="_blank" class="project-link">View Site →</a>
-            </div>
+          <div class="skill-item">
+            <img src="assets/images/languages/css.png" alt="CSS" />
           </div>
-
-          <!-- 3rd: image left, text right -->
-          <div class="project-card">
-            <div class="project-img">
-              <img src="assets/images/site3.png" alt="Design Showcase">
-            </div>
-            <div class="project-info">
-              <h3>Classroom Hub</h3>
-              <p>
-                <span class="tech-used">HTML</span>
-                <span class="tech-used">CSS</span>
-              </p>
-              <a href="https://raveenamattu.github.io/classroomhub/" target="_blank" class="project-link">View Site →</a>
-            </div>
+          <div class="skill-item">
+            <img src="assets/images/languages/js.png" alt="JavaScript" />
           </div>
-
-          <div class="project-card">
-            <div class="project-img">
-              <img src="assets/images/game.png" alt="Kids Game">
-            </div>
-            <div class="project-info">
-              <h3>Kids Play and Learn Game</h3>
-              <p>
-                <span class="tech-used">HTML</span>
-                <span class="tech-used">CSS</span>
-                <span class="tech-used">JS</span>
-              </p>
-              <a href="#" target="_blank" id="game" class="project-link">Preview</a>
-            </div>
+          <div class="skill-item">
+            <img src="assets/images/languages/xd.png" alt="Adobe XD" />
           </div>
-
-          <div class="project-card">
-            <div class="project-img">
-              <img src="assets/images/design5.png" alt="E-commerce Site">
-            </div>
-            <div class="project-info">
-              <h3>Madagascar - Design Showcase</h3>
-              <p>
-                <span class="tech-used">Photoshop</span>
-              </p>
-              <a href="#" target="_blank" id="ps" class="project-link">Preview</a>
-            </div>
+          <div class="skill-item">
+            <img src="assets/images/languages/ps.png" alt="Adobe Phototoshop" />
           </div>
-
-          <!-- 3rd: image left, text right -->
-          <div class="project-card">
-            <div class="project-img">
-              <img src="assets/images/design1.png" alt="Design Showcase">
-            </div>
-            <div class="project-info">
-              <h3>Star Wars - Design Showcase</h3>
-              <p>
-                <span class="tech-used">XD</span>
-              </p>
-              <a href="https://xd.adobe.com/view/9a7f0840-36b2-4c65-b03b-dcbc21750e27-cf2c/?fullscreen" id="starWarsXD" target="_blank" class="project-link">Preview</a>
-            </div>
+          <div class="skill-item">
+            <img src="assets/images/languages/java.png" alt="Java" />
           </div>
-
-          <div class="project-card">
-            <div class="project-img">
-              <img src="assets/images/design2.png" alt="E-commerce Site">
-            </div>
-            <div class="project-info">
-              <h3>Urban Glide Skateboards - Design Showcase</h3>
-              <p>
-                <span class="tech-used">XD</span>
-              </p>
-              <a href="https://xd.adobe.com/view/60da807e-2d0a-482f-97e9-a15a48b461ea-3589/" target="_blank" class="project-link">Preview</a>
-            </div>
+          <div class="skill-item">
+            <img src="assets/images/languages/php.png" alt="PHP" />
           </div>
-
-          <!-- 3rd: image left, text right -->
-          <div class="project-card">
-            <div class="project-img">
-              <img src="assets/images/design4.png" alt="Design Showcase">
-            </div>
-            <div class="project-info">
-              <h3>Farmers Market - Design Showcase</h3>
-              <p>
-                <span class="tech-used">XD</span>
-              </p>
-              <a href="#" id="market" target="_blank" class="project-link">Preview</a>
-            </div>
+          <div class="skill-item">
+            <img src="assets/images/languages/react.png" alt="React" />
           </div>
-
-          <div class="project-card">
-            <div class="project-img">
-              <img src="assets/images/site1.png" alt="E-commerce Site">
-            </div>
-            <div class="project-info">
-              <h3>Trios College Clone</h3>
-              <p>
-                <span class="tech-used">HTML</span>
-                <span class="tech-used">CSS</span>
-              </p>
-              <a href="#" id="trios" target="_blank" class="project-link">Preview</a>
-            </div>
-          </div> 
-          
-          <div class="project-card">
-            <div class="project-img">
-              <img src="assets/images/wordpress.png" alt="E-commerce Site">
-            </div>
-            <div class="project-info">
-              <h3>Star Wars - Design Showcase</h3>
-              <p>
-                <span class="tech-used">Wordpress</span>
-              </p>
-              <a href="https://raveenamattu.wordpress.com/" target="_blank" class="project-link">Preview</a>
-            </div>
+          <div class="skill-item">
+            <img src="assets/images/languages/aI.png" alt="Illustrator" />
+          </div>
+          <div class="skill-item">
+            <img src="assets/images/languages/swift.png" alt="Swift" />
+          </div>
+          <div class="skill-item">
+            <img src="assets/images/languages/mysql.png" alt="MySQL" />
+          </div>
+          <div class="skill-item">
+            <img src="assets/images/languages/linux.png" alt="Linux" />
+          </div>
+          <div class="skill-item">
+            <img src="assets/images/languages/wordpress.png" alt="Wordpress" />
+          </div>
+          <div class="skill-item">
+            <img src="assets/images/languages/github.png" alt="Github" />
+          </div>
+          <div class="skill-item">
+            <img src="assets/images/languages/vscode.png" alt="VS Code" />
+          </div>
+          <div class="skill-item">
+            <img src="assets/images/languages/angular.png" alt="Angular" />
           </div>
         </div>
-      </div>
-        <button class="slider-btn next" onclick="slideProjects(1)">›</button>
-      </div>
-    </section>
+      </section>
+      <section id="projects">
+        <h2>PROJECTS</h2>
 
+        <div class="slider-container">
+          <button class="slider-btn prev" onclick="slideProjects(-1)">‹</button>
+          <div class="slider-wrapper">
+            <div class="slider-track" id="sliderTrack">
+              <div class="project-card">
+                <div class="project-img">
+                  <img src="assets/images/effishop.png" alt="EffiShop" />
+                </div>
+                <div class="project-info">
+                  <h3>Effishop</h3>
+                  <p>
+                    <span class="tech-used">React</span>
+                    <span class="tech-used">CSS</span>
+                  </p>
+                  <a
+                    href="https://effishop.netlify.app/"
+                    target="_blank"
+                    class="project-link"
+                    >Preview</a
+                  >
+                </div>
+              </div>
+              <!-- 1st: image left, text right -->
+              <div class="project-card">
+                <div class="project-img">
+                  <img src="assets/images/design3.png" alt="Portfolio Site 1" />
+                </div>
+                <div class="project-info">
+                  <h3>PRISM Electronics - Design Showcase</h3>
+                  <p><span class="tech-used">XD</span></p>
+                  <a
+                    href="https://xd.adobe.com/view/49fda550-d9ae-4bc6-a81a-7e2a18056b05-1cae/"
+                    target="_blank"
+                    class="project-link"
+                    >Preview</a
+                  >
+                </div>
+              </div>
 
+              <!-- 2nd: image right, text left -->
+              <div class="project-card">
+                <div class="project-img">
+                  <img src="assets/images/site2.png" alt="E-commerce Site" />
+                </div>
+                <div class="project-info">
+                  <h3>Incredible India</h3>
+                  <p>
+                    <span class="tech-used">HTML</span>
+                    <span class="tech-used">CSS</span>
+                  </p>
+                  <a
+                    href="https://raveenamattu.github.io/incredibleindia/"
+                    target="_blank"
+                    class="project-link"
+                    >View Site →</a
+                  >
+                </div>
+              </div>
 
-    <section id="contact">
+              <!-- 3rd: image left, text right -->
+              <div class="project-card">
+                <div class="project-img">
+                  <img src="assets/images/site3.png" alt="Design Showcase" />
+                </div>
+                <div class="project-info">
+                  <h3>Classroom Hub</h3>
+                  <p>
+                    <span class="tech-used">HTML</span>
+                    <span class="tech-used">CSS</span>
+                  </p>
+                  <a
+                    href="https://raveenamattu.github.io/classroomhub/"
+                    target="_blank"
+                    class="project-link"
+                    >View Site →</a
+                  >
+                </div>
+              </div>
+
+              <div class="project-card">
+                <div class="project-img">
+                  <img src="assets/images/game.png" alt="Kids Game" />
+                </div>
+                <div class="project-info">
+                  <h3>Kids Play and Learn Game</h3>
+                  <p>
+                    <span class="tech-used">HTML</span>
+                    <span class="tech-used">CSS</span>
+                    <span class="tech-used">JS</span>
+                  </p>
+                  <a href="#" target="_blank" id="game" class="project-link"
+                    >Preview</a
+                  >
+                </div>
+              </div>
+
+              <div class="project-card">
+                <div class="project-img">
+                  <img src="assets/images/design5.png" alt="E-commerce Site" />
+                </div>
+                <div class="project-info">
+                  <h3>Madagascar - Design Showcase</h3>
+                  <p>
+                    <span class="tech-used">Photoshop</span>
+                  </p>
+                  <a href="#" target="_blank" id="ps" class="project-link"
+                    >Preview</a
+                  >
+                </div>
+              </div>
+
+              <!-- 3rd: image left, text right -->
+              <div class="project-card">
+                <div class="project-img">
+                  <img src="assets/images/design1.png" alt="Design Showcase" />
+                </div>
+                <div class="project-info">
+                  <h3>Star Wars - Design Showcase</h3>
+                  <p>
+                    <span class="tech-used">XD</span>
+                  </p>
+                  <a
+                    href="https://xd.adobe.com/view/9a7f0840-36b2-4c65-b03b-dcbc21750e27-cf2c/?fullscreen"
+                    id="starWarsXD"
+                    target="_blank"
+                    class="project-link"
+                    >Preview</a
+                  >
+                </div>
+              </div>
+
+              <div class="project-card">
+                <div class="project-img">
+                  <img src="assets/images/design2.png" alt="E-commerce Site" />
+                </div>
+                <div class="project-info">
+                  <h3>Urban Glide Skateboards - Design Showcase</h3>
+                  <p>
+                    <span class="tech-used">XD</span>
+                  </p>
+                  <a
+                    href="https://xd.adobe.com/view/60da807e-2d0a-482f-97e9-a15a48b461ea-3589/"
+                    target="_blank"
+                    class="project-link"
+                    >Preview</a
+                  >
+                </div>
+              </div>
+
+              <!-- 3rd: image left, text right -->
+              <div class="project-card">
+                <div class="project-img">
+                  <img src="assets/images/design4.png" alt="Design Showcase" />
+                </div>
+                <div class="project-info">
+                  <h3>Farmers Market - Design Showcase</h3>
+                  <p>
+                    <span class="tech-used">XD</span>
+                  </p>
+                  <a href="#" id="market" target="_blank" class="project-link"
+                    >Preview</a
+                  >
+                </div>
+              </div>
+
+              <div class="project-card">
+                <div class="project-img">
+                  <img src="assets/images/site1.png" alt="E-commerce Site" />
+                </div>
+                <div class="project-info">
+                  <h3>Trios College Clone</h3>
+                  <p>
+                    <span class="tech-used">HTML</span>
+                    <span class="tech-used">CSS</span>
+                  </p>
+                  <a href="#" id="trios" target="_blank" class="project-link"
+                    >Preview</a
+                  >
+                </div>
+              </div>
+
+              <div class="project-card">
+                <div class="project-img">
+                  <img
+                    src="assets/images/wordpress.png"
+                    alt="E-commerce Site"
+                  />
+                </div>
+                <div class="project-info">
+                  <h3>Star Wars - Design Showcase</h3>
+                  <p>
+                    <span class="tech-used">Wordpress</span>
+                  </p>
+                  <a
+                    href="https://raveenamattu.wordpress.com/"
+                    target="_blank"
+                    class="project-link"
+                    >Preview</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="slider-btn next" onclick="slideProjects(1)">›</button>
+        </div>
+      </section>
+
+      <section id="contact">
         <div class="contact-info">
           <h2>CONTACT</h2>
           <p>
-            I’m always open to new opportunities, collaborations, or just a friendly chat
-            about design and development. Whether you have a project in mind or simply
-            want to connect, feel free to reach out — I’d love to hear from you!
+            I’m always open to new opportunities, collaborations, or just a
+            friendly chat about design and development. Whether you have a
+            project in mind or simply want to connect, feel free to reach out —
+            I’d love to hear from you!
           </p>
         </div>
-        <form class="contact-form" action="https://formsubmit.co/raveenamattu.dev@gmail.com" method="POST" id="contactForm">
-          <input type="hidden" name="_captcha" value="false">
-          
-          <input type="text" name="name" placeholder="Enter your name" required>
-          <input type="email" name="email" placeholder="Enter your email address" required>
-          <textarea name="message" placeholder="Enter your message" required></textarea>
-          
+        <form
+          class="contact-form"
+          action="https://formsubmit.co/raveenamattu.dev@gmail.com"
+          method="POST"
+          id="contactForm"
+        >
+          <input type="hidden" name="_captcha" value="false" />
+
+          <input
+            type="text"
+            name="name"
+            placeholder="Enter your name"
+            required
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder="Enter your email address"
+            required
+          />
+          <textarea
+            name="message"
+            placeholder="Enter your message"
+            required
+          ></textarea>
+
           <button type="submit">Send Message</button>
         </form>
-    </section>
-    <div id="thankYouLightbox" class="lightbox">
-      <div class="lightbox-content">
-        <p>Thank you! Your message has been sent.</p>
-        <button onclick="closeLightbox()">Close</button>
+      </section>
+      <div id="thankYouLightbox" class="lightbox">
+        <div class="lightbox-content">
+          <p>Thank you! Your message has been sent.</p>
+          <button onclick="closeLightbox()">Close</button>
+        </div>
       </div>
-    </div>
-  </main>
-  <footer>
+    </main>
+    <footer>
       <p>© 2025 Raveena Mattu Designs. All Rights Reserved.</p>
-  </footer>
-</body>
+    </footer>
+  </body>
 </html>
